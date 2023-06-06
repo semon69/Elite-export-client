@@ -21,7 +21,8 @@ const Navbar = () => {
                             {navItem}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
+                    <img className='w-14' src="https://i.ibb.co/C24ghcf/download.jpg" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -29,7 +30,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link className='btn' to='/login'>Login</Link>
                 </div>
             </div>
         </div>
