@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Registration = () => {
     const { register, handleSubmit, reset, formState: { errors }, getValues } = useForm();
+    const { createUser, profileUpdate} = useContext(AuthContext);
+    const navigate = useNavigate();
     const onSubmit = data => {
         console.log(data)
+        createUser(data.email, data.password)
+            .then(result => {
+
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+                profileUpdate(data.name, data.photoURL)
+                    .then(() => { })
+                    .catch(error => console.log(error))
+            })
     }
     return (
         <div>
