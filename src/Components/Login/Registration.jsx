@@ -6,7 +6,7 @@ import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Registration = () => {
     const { register, handleSubmit, reset, formState: { errors }, getValues } = useForm();
-    const { createUser, profileUpdate} = useContext(AuthContext);
+    const { createUser, profileUpdate } = useContext(AuthContext);
     const navigate = useNavigate();
     const onSubmit = data => {
         console.log(data)
@@ -17,7 +17,19 @@ const Registration = () => {
                 console.log(loggedUser);
 
                 profileUpdate(data.name, data.photoURL)
-                    .then(() => { })
+                    .then(() => {
+                        const user = { name: data.name, email: loggedUser.email }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: { 'content-type': 'application/json' },
+                            body: JSON.stringify(user)
+                        })
+                            .then(data => {
+                                console.log(data);
+                                navigate('/')
+                            })
+                            .then(err => console.log(err))
+                    })
                     .catch(error => console.log(error))
             })
     }
