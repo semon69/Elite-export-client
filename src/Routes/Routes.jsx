@@ -8,6 +8,7 @@ import Instructors from "../Components/Instructors/Instructors";
 import Dashboard from "../Layout/Dashboard";
 import MyClass from "../Components/Dashboard/MyClass/MyClass";
 import MyEnrollClass from "../Components/Dashboard/MyEnrollClass/MyEnrollClass";
+import AllUsers from "../Components/Dashboard/AllUser/AllUser";
 
 const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: 'myEnrollClass',
                 element: <MyEnrollClass></MyEnrollClass>
+            },
+            {
+                path: 'allUsers',
+                element: <AllUsers></AllUsers>
             }
         ]
     }
