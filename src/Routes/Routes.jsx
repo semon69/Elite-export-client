@@ -9,6 +9,7 @@ import Dashboard from "../Layout/Dashboard";
 import MyClass from "../Components/Dashboard/MyClass/MyClass";
 import MyEnrollClass from "../Components/Dashboard/MyEnrollClass/MyEnrollClass";
 import AllUsers from "../Components/Dashboard/AllUser/AllUser";
+import PrivateRoute from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
             {
                 path: 'myClass',

@@ -3,12 +3,13 @@ import React from 'react';
 import { FaTrashAlt, FaUserAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 const AllUsers = () => {
-
+    const [axiosSecure] = useAxiosSecure()
 
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await axios('http://localhost:5000/users');
+        const res = await axiosSecure('/users');
         return res.data
     })
 

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useAdmin from '../Hooks/useAdmin';
 
 const Dashboard = () => {
+
+    const [isAdmin] = useAdmin();
+
     return (
         <div>
             <div className="drawer lg:drawer-open">
@@ -15,10 +19,20 @@ const Dashboard = () => {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                        {/* Sidebar content here */}
-                        <li><Link to='/dashboard/myClass'>My Classes</Link></li>
-                        <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
-                        <li><Link to='/dashboard/allUsers'>All Users</Link></li>
+                        {
+                            isAdmin ?
+                                <>
+                                    <li><Link to='/dashboard/myClass'>Manage Classes</Link></li>
+                                    <li><Link to='/dashboard/allUsers'>Manage Users</Link></li>
+                                </>
+                                :
+                                <>
+                                    <li><Link to='/dashboard/myClass'>My Classes</Link></li>
+                                    <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
+                                </>
+
+                        }
+
                         <li><Link to='/'>Home</Link></li>
                     </ul>
 
