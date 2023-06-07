@@ -6,6 +6,8 @@ import Registration from "../Components/Login/Registration";
 import Classes from "../Components/Classes/Classes";
 import Instructors from "../Components/Instructors/Instructors";
 import Dashboard from "../Layout/Dashboard";
+import MyClass from "../Components/Dashboard/MyClass/MyClass";
+import MyEnrollClass from "../Components/Dashboard/MyEnrollClass/MyEnrollClass";
 
 const router = createBrowserRouter([
     {
@@ -36,7 +38,17 @@ const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'myClass',
+                element: <MyClass></MyClass>
+            },
+            {
+                path: 'myEnrollClass',
+                element: <MyEnrollClass></MyEnrollClass>
+            }
+        ]
     }
   ]);
 
