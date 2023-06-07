@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Registration = () => {
     const { register, handleSubmit, reset, formState: { errors }, getValues } = useForm();
@@ -26,7 +27,7 @@ const Registration = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -64,6 +65,7 @@ const Registration = () => {
                                 </label>
                                 <input
                                     className="input input-bordered"
+                                    placeholder='Confirm Password'
                                     {...register("passwordConfirmation", {
                                         required: "Please confirm password!",
                                         validate: {
@@ -87,7 +89,8 @@ const Registration = () => {
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <SocialLogin></SocialLogin>
+                        <p className='mt-4'><small>Already have an account <Link to="/login">Login</Link></small></p>
                     </div>
                 </div>
             </div>

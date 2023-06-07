@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -18,7 +19,7 @@ const Login = () => {
                     <div className="text-center md:w-1/2 lg:text-left">
                         
                     </div>
-                    <div className="card shadow-2xl bg-base-100">
+                    <div className="card shadow-2xl bg-base-100 p-4">
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -39,7 +40,8 @@ const Login = () => {
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p><small>New Here? <Link to="/registration">Create an account</Link> </small></p>
+                        <SocialLogin></SocialLogin>
+                        <p className='mt-4'><small>New Here? <Link to="/registration">Create an account</Link> </small></p>
                     </div>
                 </div>
             </div>
