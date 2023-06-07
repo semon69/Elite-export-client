@@ -5,6 +5,7 @@ import Login from "../Components/Login/Login";
 import Registration from "../Components/Login/Registration";
 import Classes from "../Components/Classes/Classes";
 import Instructors from "../Components/Instructors/Instructors";
+import Dashboard from "../Layout/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>
+    }
   ]);
 
   export default router;
