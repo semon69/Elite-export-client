@@ -35,11 +35,12 @@ const Registration = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
+            <div className="hero min-h-screen bg-gradient-to-r from-indigo-600 to-fuchsia-800">
+                <div className="hero-content flex-col lg:flex-row gap-16">
+                    <div className="text-center lg:text-left w-1/2">
+                        <img className='rounded' src="https://i.ibb.co/rtcgVch/undraw-Mobile-login-re-9ntv.png" alt="" />
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-4">
+                    <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100 p-4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -98,7 +99,7 @@ const Registration = () => {
                                 {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <input className="btn bg-gradient-to-r from-red-600 to-indigo-700 text-white" type="submit" value="Sign Up" />
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>

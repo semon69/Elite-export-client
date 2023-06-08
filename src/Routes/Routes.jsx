@@ -12,11 +12,13 @@ import AllUsers from "../Components/Dashboard/AllUser/AllUser";
 import PrivateRoute from "./PrivateRoutes";
 import AddAClass from "../Components/Dashboard/AddAClass/AddAClass";
 import ManageClasses from "../Components/Dashboard/ManageClasses/ManageClasses";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: 'myClass',

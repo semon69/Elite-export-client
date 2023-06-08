@@ -10,7 +10,9 @@ const ManageClasses = () => {
             return res.data
         }
     })
-    console.log(classes);
+    const handleApprove = () => {
+        
+    }
     return (
         <div>
             <div className="overflow-x-auto">

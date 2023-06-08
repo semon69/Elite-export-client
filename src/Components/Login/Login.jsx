@@ -23,11 +23,11 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col md:flex-row-reverse">
+        <div className=''>
+            <div className="hero min-h-screen bg-gradient-to-r from-indigo-600 to-fuchsia-700">
+                <div className="hero-content flex-col md:flex-row gap-10">
                     <div className="text-center md:w-1/2 lg:text-left">
-
+                            <img src="https://i.ibb.co/g4JgwsS/undraw-Login-re-4vu2.png" alt="" />
                     </div>
                     <div className="card shadow-2xl bg-base-100 p-4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -44,7 +44,7 @@ const Login = () => {
                                 <input {...register("password", { required: true })} type="password" name="password" placeholder="password" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn bg-gradient-to-r from-red-600 to-indigo-700 text-white" type="submit" value="Login" />
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
