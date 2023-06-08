@@ -20,7 +20,7 @@ const AllUsers = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.modifiedCount > 0){
+                if (data.modifiedCount > 0) {
                     refetch()
                     Swal.fire(
                         'Good job!',
@@ -32,8 +32,22 @@ const AllUsers = () => {
 
     }
 
-    const handleDelete = () => {
-
+    const handleMakeInstructor = user => {
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+            method: 'PATCH'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    refetch()
+                    Swal.fire(
+                        'Good job!',
+                        `${user.name} is instructor now`,
+                        'success'
+                    )
+                }
+            })
     }
 
     return (
@@ -48,7 +62,8 @@ const AllUsers = () => {
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Role</th>
-                                <th>Action</th>
+                                <th>Action 1</th>
+                                <th>Action 2</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,10 +73,11 @@ const AllUsers = () => {
                                         <th>{index + 1}</th>
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
-                                        <td> {user?.role ? 'admin' :
-                                            <button onClick={() => handleMakeId(user)} className="btn bg-orange-500 btn-xs"><FaUserAlt></FaUserAlt></button>
+                                        <td>{user?.role === 'admin' ? 'admin' : 'student' && user?.role === 'instructor' ? 'instructor' : 'student'}</td>
+                                        <td> {
+                                            <button onClick={() => handleMakeId(user)} className="btn bg-orange-500 btn-xs">Make Admin</button>
                                         } </td>
-                                        <td><button onClick={() => handleDelete(user)} className="btn bg-red-700 btn-xs"><FaTrashAlt></FaTrashAlt></button></td>
+                                        <td><button onClick={() => handleMakeInstructor(user)} className="btn btn-xs">Make Instructor</button></td>
                                     </tr>)
                             }
 

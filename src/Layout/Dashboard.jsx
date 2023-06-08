@@ -1,10 +1,34 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import useAdmin from '../Hooks/useAdmin';
+import useInstructor from '../Hooks/useInstructor';
 
 const Dashboard = () => {
 
     const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor()
+    console.log(isInstructor);
+
+
+    if (isAdmin) {
+        <>
+            <li><Link to='/dashboard/myClass'>Manage Classes</Link></li>
+            <li><Link to='/dashboard/allUsers'>Manage Users</Link></li>
+        </>
+    }
+    else if (isInstructor) {
+        <>
+            <li><Link to='/dashboard/addAClass'>Add A Class</Link></li>
+            <li><Link to='/dashboard/myClass'>My Class</Link></li>
+        </>
+    }
+    else {
+        <>
+            <li><Link to='/dashboard/myClass'>My Classes</Link></li>
+            <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
+        </>
+    }
+
 
     return (
         <div>
@@ -30,8 +54,21 @@ const Dashboard = () => {
                                     <li><Link to='/dashboard/myClass'>My Classes</Link></li>
                                     <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
                                 </>
+                                    &&
+                                    isInstructor ?
+                                    <>
+                                        <li><Link to='/dashboard/addAClass'>Add A Class</Link></li>
+                                        <li><Link to='/dashboard/myClass'>My Class</Link></li>
+                                    </>
+                                    :
+                                    <>
+                                        <li><Link to='/dashboard/myClass'>My Classes</Link></li>
+                                        <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
+                                    </>
 
                         }
+
+
 
                         <li><Link to='/'>Home</Link></li>
                     </ul>
