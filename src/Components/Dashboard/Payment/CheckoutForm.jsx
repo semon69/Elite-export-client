@@ -21,7 +21,7 @@ const CheckoutForm = ({ price, myClass }) => {
                     setClientSecret(res.data.clientSecret);
                 })
         }
-    }, [price, axiosSecure])
+    }, [price])
 
 
     const handleSubmit = async (event) => {
@@ -79,13 +79,14 @@ const CheckoutForm = ({ price, myClass }) => {
                 date: new Date(),
                 quantity: myClass.length,
                 classes: myClass.map(classe => classe._id),
+                classId: myClass.map(classe => classe.classId),
                 status: 'service pending',
                 classNames: myClass.map(classe => classe.name)
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
                     console.log(res.data);
-                    if (res.data.result.insertedId) {
+                    if (res.data.insertedId) {
                         // display confirm
                     }
                 })

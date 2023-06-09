@@ -4,7 +4,6 @@ import Home from "../Components/Home/Home/Home";
 import Login from "../Components/Login/Login";
 import Registration from "../Components/Login/Registration";
 import Classes from "../Components/Classes/Classes";
-import Instructors from "../Components/Instructors/Instructors";
 import Dashboard from "../Layout/Dashboard";
 import MyClass from "../Components/Dashboard/MyClass/MyClass";
 import MyEnrollClass from "../Components/Dashboard/MyEnrollClass/MyEnrollClass";
@@ -16,6 +15,8 @@ import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import InstructorAddedClass from "../Components/Dashboard/InstructorAddedClass/InstructorAddedClass";
 import Payment from "../Components/Dashboard/Payment/Payment";
 import InstructorPage from "../Components/InstructorPage/InstructorPage";
+import AdminRoutes from "./AdminRoutes";
+import InstructorRoutes from "./InstructorRoutes";
 
 const router = createBrowserRouter([
     {
@@ -64,19 +65,19 @@ const router = createBrowserRouter([
             },
             {
                 path: 'allUsers',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>
             },
             {
                 path: 'addAClass',
-                element: <AddAClass></AddAClass>
+                element: <InstructorRoutes><AddAClass></AddAClass></InstructorRoutes>
             },
             {
                 path: 'manageClasses',
-                element: <ManageClasses></ManageClasses>
+                element: <AdminRoutes><ManageClasses></ManageClasses></AdminRoutes>
             },
             {
                 path: 'instructorClass',
-                element: <InstructorAddedClass></InstructorAddedClass>
+                element: <InstructorRoutes><InstructorAddedClass></InstructorAddedClass></InstructorRoutes>
             }
         ]
     }
