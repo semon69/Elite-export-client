@@ -13,7 +13,7 @@ const Navbar = () => {
     const navItem =
         <>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/instructors'>Instructors</Link></li>
+            <li><Link to='/user/instructors'>Instructors</Link></li>
             <li><Link to='/classes'>Classes</Link></li>
             {user && <li><Link to='/dashboard'>Dashboard</Link></li>}
         </>
@@ -42,7 +42,7 @@ const Navbar = () => {
                         user ?
                             <>
                                 <Link onClick={handleLogout} className='btn bg-gradient-to-r from-red-600 to-indigo-700 text-white'>Logout</Link>
-                                <p><img className='w-12 rounded-full ms-3' src={user.photoURL} alt="img" /></p>
+                                <p><img className='w-12 rounded-full ms-3' src={user?.photoURL} alt="img" /></p>
                             </>
 
                             :

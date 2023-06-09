@@ -31,7 +31,7 @@ const Dashboard = () => {
                                 </>
                                 :
                                 <>
-                                    <li><NavLink to='/dashboard/myClass'>My Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/myClass'>My Selected Classes</NavLink></li>
                                     <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
                                 </>
                                     &&
@@ -42,7 +42,7 @@ const Dashboard = () => {
                                     </>
                                     :
                                     <>
-                                        <li><NavLink to='/dashboard/myClass'>My Classes</NavLink></li>
+                                        <li><NavLink to='/dashboard/myClass'>My Selected Classes</NavLink></li>
                                         <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
                                     </>
 

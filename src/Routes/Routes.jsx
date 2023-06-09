@@ -14,6 +14,8 @@ import AddAClass from "../Components/Dashboard/AddAClass/AddAClass";
 import ManageClasses from "../Components/Dashboard/ManageClasses/ManageClasses";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import InstructorAddedClass from "../Components/Dashboard/InstructorAddedClass/InstructorAddedClass";
+import Payment from "../Components/Dashboard/Payment/Payment";
+import InstructorPage from "../Components/InstructorPage/InstructorPage";
 
 const router = createBrowserRouter([
     {
@@ -38,8 +40,8 @@ const router = createBrowserRouter([
             element: <Classes></Classes>
         },
         {
-            path: 'instructors',
-            element:<Instructors></Instructors>
+            path: 'user/instructors',
+            element:<InstructorPage></InstructorPage>
         }
       ]
     },
@@ -51,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: 'myClass',
                 element: <MyClass></MyClass>
+            },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
             },
             {
                 path: 'myEnrollClass',

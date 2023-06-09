@@ -18,7 +18,7 @@ const Registration = () => {
 
                 profileUpdate(data.name, data.photoURL)
                     .then(() => {
-                        const user = { name: data.name, email: loggedUser.email }
+                        const user = { name: data.name, email: loggedUser.email, image: data.photoURL }
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: { 'content-type': 'application/json' },
