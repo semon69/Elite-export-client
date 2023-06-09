@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const AddAClass = () => {
     const { user } = useContext(AuthContext)
@@ -14,7 +15,8 @@ const AddAClass = () => {
             instructorEmail: data.email,
             availableSeats: parseFloat(data.seats),
             price: parseFloat(data.price),
-            status: 'pending'
+            status: 'pending',
+            enrolStudent: 0
         }
 
         fetch('http://localhost:5000/classes', {
@@ -24,7 +26,9 @@ const AddAClass = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if(data.insertedId){
+                    Swal.fire('A class added')
+                }
             })
         console.log(newClass);
     }

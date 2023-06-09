@@ -11,11 +11,13 @@ const Classes = () => {
             return res.data
         }
     })
+    const approveClasses = classes.filter(classe => classe.status == 'approved')
+
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
-                    classes.map(cls => <SingleClass key={cls._id} cls={cls}></SingleClass>)
+                    approveClasses.map(cls => <SingleClass key={cls._id} cls={cls}></SingleClass>)
                 }
             </div>
         </div>

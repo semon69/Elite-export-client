@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoutes";
 import AddAClass from "../Components/Dashboard/AddAClass/AddAClass";
 import ManageClasses from "../Components/Dashboard/ManageClasses/ManageClasses";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import InstructorAddedClass from "../Components/Dashboard/InstructorAddedClass/InstructorAddedClass";
 
 const router = createBrowserRouter([
     {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageClasses',
                 element: <ManageClasses></ManageClasses>
+            },
+            {
+                path: 'instructorClass',
+                element: <InstructorAddedClass></InstructorAddedClass>
             }
         ]
     }

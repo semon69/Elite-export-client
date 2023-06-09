@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../Hooks/useAdmin';
 import useInstructor from '../Hooks/useInstructor';
 
@@ -7,7 +7,8 @@ const Dashboard = () => {
 
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor()
-
+    console.log(isAdmin);
+    console.log(isInstructor);
 
     return (
         <div>
@@ -21,35 +22,35 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+                    <ul className=" p-4 w-80 h-full bg-gradient-to-r from-indigo-600 to-cyan-700 text-white font-bold text-2xl pt-10 space-y-6">
                         {
                             isAdmin ?
                                 <>
-                                    <li><Link to='/dashboard/manageClasses'>Manage Classes</Link></li>
-                                    <li><Link to='/dashboard/allUsers'>Manage Users</Link></li>
+                                    <li><NavLink to='/dashboard/manageClasses'>Manage Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/allUsers'>Manage Users</NavLink></li>
                                 </>
                                 :
                                 <>
-                                    <li><Link to='/dashboard/myClass'>My Classes</Link></li>
-                                    <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
+                                    <li><NavLink to='/dashboard/myClass'>My Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
                                 </>
                                     &&
                                     isInstructor ?
                                     <>
-                                        <li><Link to='/dashboard/addAClass'>Add A Class</Link></li>
-                                        <li><Link to='/dashboard/myClass'>My Class</Link></li>
+                                        <li><NavLink to='/dashboard/addAClass'>Add A Class</NavLink></li>
+                                        <li><NavLink to='/dashboard/instructorClass'>My Class</NavLink></li>
                                     </>
                                     :
                                     <>
-                                        <li><Link to='/dashboard/myClass'>My Classes</Link></li>
-                                        <li><Link to='/dashboard/myEnrollClass'>My Enrolled Classes</Link></li>
+                                        <li><NavLink to='/dashboard/myClass'>My Classes</NavLink></li>
+                                        <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
                                     </>
 
                         }
 
 
 
-                        <li><Link to='/'>Home</Link></li>
+                        <li><NavLink to='/'>Home</NavLink></li>
                     </ul>
 
                 </div>
