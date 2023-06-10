@@ -33,6 +33,7 @@ const Dashboard = () => {
                                 <>
                                     <li><NavLink to='/dashboard/myClass'>My Selected Classes</NavLink></li>
                                     <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
                                 </>
                                     &&
                                     isInstructor ?
@@ -44,6 +45,7 @@ const Dashboard = () => {
                                     <>
                                         <li><NavLink to='/dashboard/myClass'>My Selected Classes</NavLink></li>
                                         <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
+                                        <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
                                     </>
 
                         }

@@ -1,11 +1,16 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import useAdmin from '../../../Hooks/useAdmin';
+import useInstructor from '../../../Hooks/useInstructor';
 
 const SingleClass = ({ cls }) => {
     const { image, name, availableSeats, instructorName, price, _id } = cls
     const { user } = useContext(AuthContext)
     const navigate = useNavigate()
+
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor()
 
     const handleSelect = () => {
         const myCart = { image, name, availableSeats, instructorName, price, email: user?.email, classId: _id }
@@ -34,7 +39,7 @@ const SingleClass = ({ cls }) => {
                     <p>Available Seat: {availableSeats}</p>
                     <p>Price: ${price}</p>
                 </div>
-                <button onClick={handleSelect} className='btn btn-primary'>Select</button>
+                <button disabled={isAdmin || isInstructor} onClick={handleSelect} className='btn btn-primary'>Select</button>
             </div>
         </div>
     );

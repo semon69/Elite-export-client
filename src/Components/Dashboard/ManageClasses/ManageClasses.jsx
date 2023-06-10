@@ -14,14 +14,14 @@ const ManageClasses = () => {
         console.log(id);
         fetch(`http://localhost:5000/classes/${id}`, {
             method: 'PATCH',
-            headers:{'content-type': 'application/json'},
-            body: JSON.stringify({status: status})
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ status: status })
         })
-        .then(res => res.json())
-        .then(data => {
-            refetch()
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                refetch()
+                console.log(data);
+            })
     }
     return (
         <div>
@@ -47,7 +47,7 @@ const ManageClasses = () => {
                             classes.map((singleClass, index) =>
                                 <tr key={singleClass._id}>
                                     <th>
-                                        {index+1}
+                                        {index + 1}
                                     </th>
                                     <td>
                                         <div className="flex items-center space-x-3">
@@ -70,8 +70,18 @@ const ManageClasses = () => {
                                     <td>{singleClass.price}</td>
                                     <td>{singleClass.status}</td>
                                     <th className='flex flex-col gap-4'>
-                                        <button onClick={()=>handleApproveAndDenied(singleClass._id, 'approved')} className="btn bg-green-500 btn-xs text-white">Approve</button>
-                                        <button onClick={()=>handleApproveAndDenied(singleClass._id, 'denied')} className="btn bg-red-500 btn-xs text-white">Deny</button>
+                                        <button
+                                            disabled={singleClass?.status == 'approved' || singleClass?.status == 'denied'}
+                                            onClick={() => handleApproveAndDenied(singleClass._id, 'approved')}
+                                            className="btn bg-green-500 btn-xs text-white">
+                                            Approve
+                                        </button>
+                                        <button
+                                            disabled={singleClass?.status == 'approved' || singleClass?.status == 'denied'}
+                                            onClick={() => handleApproveAndDenied(singleClass._id, 'denied')}
+                                            className="btn bg-red-500 btn-xs text-white">
+                                            Deny
+                                        </button>
                                         <button className="btn bg-orange-300 btn-xs text-white">Feedback</button>
                                     </th>
                                 </tr>

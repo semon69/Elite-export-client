@@ -75,9 +75,9 @@ const AllUsers = () => {
                                         <td>{user.email}</td>
                                         <td>{user?.role === 'admin' ? 'admin' : 'student' && user?.role === 'instructor' ? 'instructor' : 'student'}</td>
                                         <td> {
-                                            <button onClick={() => handleMakeId(user)} className="btn bg-orange-500 btn-xs">Make Admin</button>
+                                            <button disabled={user?.role == 'admin'} onClick={() => handleMakeId(user)} className="btn bg-orange-500 btn-xs text-white">Make Admin</button>
                                         } </td>
-                                        <td><button onClick={() => handleMakeInstructor(user)} className="btn btn-xs">Make Instructor</button></td>
+                                        <td><button disabled={user?.role == 'instructor'} onClick={() => handleMakeInstructor(user)} className="btn btn-xs">Make Instructor</button></td>
                                     </tr>)
                             }
 
