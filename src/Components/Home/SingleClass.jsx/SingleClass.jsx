@@ -31,7 +31,7 @@ const SingleClass = ({ cls }) => {
     }
     return (
         <div>
-            <div className='border-2 p-4 h-[450px] my-8'>
+            <div className={`border-2 p-4 h-[450px] my-8 bg-cyan-600 text-white rounded ${availableSeats == 0 && 'bg-red-600'}`}>
                 <p>{name}</p>
                 <img className='w-full h-[250px]' src={image} alt="" />
                 <p>Instructor: {instructorName}</p>
@@ -39,7 +39,7 @@ const SingleClass = ({ cls }) => {
                     <p>Available Seat: {availableSeats}</p>
                     <p>Price: ${price}</p>
                 </div>
-                <button disabled={isAdmin || isInstructor} onClick={handleSelect} className='btn btn-primary'>Select</button>
+                <button disabled={isAdmin || isInstructor || availableSeats == 0} onClick={handleSelect} className='btn btn-primary'>Select</button>
             </div>
         </div>
     );

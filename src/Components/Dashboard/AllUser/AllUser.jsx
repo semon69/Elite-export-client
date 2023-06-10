@@ -52,9 +52,9 @@ const AllUsers = () => {
 
     return (
         <div className='max-h-screen'>
-            <h2 className='uppercase text-3xl my-4'>Total User: {users.length}</h2>
+            <h2 className='uppercase text-3xl my-4 text-center'>Total User: {users.length}</h2>
             <div>
-                <div className="overflow-x-auto">
+                <div className=" overflow-y-scroll max-h-screen m-8 border-2 ">
                     <table className="table w-full">
                         <thead>
                             <tr>

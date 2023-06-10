@@ -52,7 +52,13 @@ const InstructorAddedClass = () => {
                                     <td>{singleClass.name}</td>
                                     <td>{singleClass.status}</td>
                                     <td>{singleClass.enrolStudent}</td>
-                                    <td>{singleClass?.feedback}</td>
+                                    <td>{
+
+                                        (singleClass?.status == 'approved' || singleClass?.status == 'pending')
+                                            ?
+                                            ''
+                                            : singleClass?.feedback
+                                    }</td>
                                     <td>
                                         <button className="btn bg-orange-500 btn-xs text-white">Update</button>
                                     </td>

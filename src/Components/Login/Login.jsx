@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
+import { FaEye } from 'react-icons/fa';
 const Login = () => {
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state?.from?.pathname || '/'
-
+    const [show, setShow] = useState(false)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
 
@@ -21,13 +22,15 @@ const Login = () => {
             .catch(err => console.log(err))
 
     };
-
+    const handleShowPassword = () => {
+        setShow(!show)
+    }
     return (
         <div className=''>
             <div className="hero min-h-screen bg-gradient-to-r from-indigo-600 to-fuchsia-700">
                 <div className="hero-content flex-col md:flex-row gap-10">
                     <div className="text-center md:w-1/2 lg:text-left">
-                            <img src="https://i.ibb.co/g4JgwsS/undraw-Login-re-4vu2.png" alt="" />
+                        <img src="https://i.ibb.co/g4JgwsS/undraw-Login-re-4vu2.png" alt="" />
                     </div>
                     <div className="card shadow-2xl bg-base-100 p-4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -41,7 +44,10 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input {...register("password", { required: true })} type="password" name="password" placeholder="password" className="input input-bordered" />
+                                <div className='flex relative'>
+                                    <input {...register("password", { required: true })} type={show ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered" />
+                                    <span onClick={handleShowPassword} className='cursor-pointer absolute right-3 top-3'><FaEye></FaEye></span>
+                                </div>
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn bg-gradient-to-r from-red-600 to-indigo-700 text-white" type="submit" value="Login" />

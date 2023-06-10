@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 const ManageClasses = () => {
+    const [inputValue, setInputValue] = useState('');
     const { data: classes = [], refetch } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
@@ -23,9 +24,31 @@ const ManageClasses = () => {
                 console.log(data);
             })
     }
+
+    // const feedbackRef = useRef()
+
+    const handleInputChange = event => {
+        event.preventDefault()
+        setInputValue(event.target.value);
+    }
+
+    const handleFeedback = (id) => {
+        console.log(inputValue, id);
+        const feedback = inputValue
+        fetch(`http://localhost:5000/classes/feedback/${id}`, {
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ feedback: feedback })
+        })
+            .then(res => res.json())
+            .then(data => {
+                refetch()
+                console.log(data);
+            })
+    }
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto overflow-y-auto m-8 border-2">
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -82,7 +105,21 @@ const ManageClasses = () => {
                                             className="btn bg-red-500 btn-xs text-white">
                                             Deny
                                         </button>
-                                        <button className="btn bg-orange-300 btn-xs text-white">Feedback</button>
+                                        {/* The button to open modal */}
+                                        <label htmlFor="my_modal_6" className="btn btn-xs">Feedback</label>
+
+                                        {/* Put this part before </body> tag */}
+                                        <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+                                        <div className="modal">
+                                            <div className="modal-box">
+                                                <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Give Feedback" className="input input-bordered w-full max-w-xs" />
+                                                <label onClick={() => handleFeedback(singleClass._id)} className="btn">Send</label>
+                                                <div className="modal-action">
+
+                                                    <label htmlFor="my_modal_6" className="btn">Close!</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </th>
                                 </tr>
                             )
