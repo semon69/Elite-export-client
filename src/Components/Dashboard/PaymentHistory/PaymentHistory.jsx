@@ -15,14 +15,13 @@ const PaymentHistory = () => {
         }
     })
     return (
-        <div>
-            <h2>My Payment History</h2>
-            <h1>Payment History: {payments.length}</h1>
+        <div className='border-2 border-black m-5 py-8'>
+            <h1 className='text-2xl font-bold ms-5 py-3'>Payment History</h1>
             <div className="overflow-x-auto border m-5">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className='text-black text-lg font-semibold'>
                             <th>#</th>
                             <th>Date</th>
                             <th>Quantity</th>
@@ -32,7 +31,7 @@ const PaymentHistory = () => {
                     <tbody>
                         {
                             payments.map((singleClass, index) =>
-                                <tr key={singleClass._id}>
+                                <tr key={singleClass._id} className='text-black'>
                                     <th>
                                         {index + 1}
                                     </th>

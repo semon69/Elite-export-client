@@ -32,8 +32,8 @@ const MyClass = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://sports-acedemy-server.vercel.app/myClass/${id}`,{
-                    method:'DELETE'
+                fetch(`https://sports-acedemy-server.vercel.app/myClass/${id}`, {
+                    method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
@@ -54,55 +54,57 @@ const MyClass = () => {
     }
 
     return (
-        <div className='max-w-7xl mx-auto my-12'>
-            <div className='flex justify-evenly'>
-                <p>Total class: {myClass.length}</p>
-                <p>Total Price: {total}</p>
-                <button className="btn bg-orange-500 btn-xs text-white"><Link to='/dashboard/payment'>Pay</Link> </button>
-            </div>
-            <div className="overflow-x-auto border m-5">
-                <table className="table">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>
-                                <p>Image</p>
-                            </th>
-                            <th>Name</th>
-                            <th>Available Seats</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            myClass.map((singleClass, index) =>
-                                <tr key={singleClass._id}>
-                                    <th>
-                                        {index + 1}
-                                    </th>
-                                    <td>
-                                        <div className="flex items-center space-x-3">
-                                            <div className="avatar">
-                                                <div className="mask mask-squircle w-12 h-12">
-                                                    <img src={singleClass.image} alt="Image" />
+        <div>
+            <div className='border-2 border-black m-5 py-8'>
+                <div className='flex justify-evenly text-2xl font-bold'>
+                    <p>Total class: {myClass.length}</p>
+                    <p>Total Price: {total}</p>
+                    <button className="btn px-4 bg-gradient-to-r from-red-600 to-indigo-700 text-white"><Link to='/dashboard/payment'>Pay</Link> </button>
+                </div>
+                <div className="overflow-x-auto border m-5">
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr className='text-black text-lg font-semibold'>
+                                <th>#</th>
+                                <th>
+                                    <p>Image</p>
+                                </th>
+                                <th>Name</th>
+                                <th>Available Seats</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                myClass.map((singleClass, index) =>
+                                    <tr key={singleClass._id}>
+                                        <th>
+                                            {index + 1}
+                                        </th>
+                                        <td>
+                                            <div className="flex items-center space-x-3">
+                                                <div className="avatar">
+                                                    <div className="mask mask-squircle w-12 h-12">
+                                                        <img src={singleClass.image} alt="Image" />
+                                                    </div>
                                                 </div>
+
                                             </div>
+                                        </td>
+                                        <td className='text-lg font-semibold'>{singleClass.name}</td>
+                                        <td className='font-bold'>{singleClass.availableSeats}</td>
+                                        <th className='flex flex-col gap-4'>
+                                            <button onClick={() => handleDelete(singleClass._id)} className="btn bg-red-500 btn-xs text-white">Delete</button>
+                                        </th>
+                                    </tr>
+                                )
+                            }
 
-                                        </div>
-                                    </td>
-                                    <td>{singleClass.name}</td>
-                                    <td>{singleClass.availableSeats}</td>
-                                    <th className='flex flex-col gap-4'>
-                                        <button onClick={() => handleDelete(singleClass._id)} className="btn bg-red-500 btn-xs text-white">Delete</button>
-                                    </th>
-                                </tr>
-                            )
-                        }
+                        </tbody>
 
-                    </tbody>
-
-                </table>
+                    </table>
+                </div>
             </div>
         </div>
     );

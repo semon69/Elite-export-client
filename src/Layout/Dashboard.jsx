@@ -14,7 +14,7 @@ const Dashboard = () => {
         <div>
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content">
+                <div className="drawer-content bg-cyan-400">
                     {/* Page content here */}
                     <Outlet></Outlet>
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
@@ -22,7 +22,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side fixed">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className=" p-4 w-80 h-full mt-10 bg-gradient-to-r from-indigo-600 to-cyan-700 text-white font-bold text-2xl pt-10 space-y-6">
+                    <ul className=" p-4 w-80 h-full bg-gradient-to-r from-indigo-600 to-cyan-700 text-white font-bold text-2xl pt-10 space-y-6">
                         {
                             isAdmin ?
                                 <>

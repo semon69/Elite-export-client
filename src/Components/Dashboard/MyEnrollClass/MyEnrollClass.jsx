@@ -16,13 +16,13 @@ const MyEnrollClass = () => {
     })
     console.log(myEnrollClass);
     return (
-        <div>
-            <h1>My Enrolled class: {myEnrollClass.length}</h1>
+        <div className='border-2 border-black m-5'>
+            <h1 className='text-2xl font-bold ms-5 py-3'>My Enrolled class: {myEnrollClass.length}</h1>
             <div className="overflow-x-auto border m-5">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className='text-black text-lg font-semibold'>
                             <th>#</th>
                             <th>
                                 <p>Image</p>
@@ -48,8 +48,8 @@ const MyEnrollClass = () => {
 
                                         </div>
                                     </td>
-                                    <td>{singleClass.name}</td>
-                                    <td>{singleClass.instructorName}</td>
+                                    <td className='text-black'>{singleClass.name}</td>
+                                    <td className='text-black'>{singleClass.instructorName}</td>
                                 </tr>
                             )
                         }
