@@ -4,6 +4,9 @@ import React, { useRef, useState } from 'react';
 
 const ManageClasses = () => {
     const [inputValue, setInputValue] = useState('');
+
+    const [feedbackId, setFeedbackId] = useState(null)
+
     const { data: classes = [], refetch } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
@@ -32,10 +35,9 @@ const ManageClasses = () => {
         setInputValue(event.target.value);
     }
 
-    const handleFeedback = (id) => {
-        console.log(inputValue, id);
+    const handleFeedback = () => {
         const feedback = inputValue
-        fetch(`https://sports-acedemy-server.vercel.app/classes/feedback/${id}`, {
+        fetch(`https://sports-acedemy-server.vercel.app/classes/feedback/${feedbackId}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ feedback: feedback })
@@ -106,14 +108,14 @@ const ManageClasses = () => {
                                             Deny
                                         </button>
                                         {/* The button to open modal */}
-                                        <label htmlFor="my_modal_6" className="btn btn-xs">Feedback</label>
+                                        <label onClick={()=> setFeedbackId(singleClass._id)} htmlFor="my_modal_6" className="btn btn-xs">Feedback</label>
 
                                         {/* Put this part before </body> tag */}
                                         <input type="checkbox" id="my_modal_6" className="modal-toggle" />
                                         <div className="modal">
                                             <div className="modal-box">
                                                 <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Give Feedback" className="input input-bordered w-full max-w-xs" />
-                                                <label onClick={() => handleFeedback(singleClass._id)} className="btn">Send</label>
+                                                <label onClick={() => handleFeedback()} className="btn">Send</label>
                                                 <div className="modal-action">
 
                                                     <label htmlFor="my_modal_6" className="btn">Close!</label>

@@ -4,10 +4,11 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 
 const PaymentHistory = () => {
-    const { user } = useContext(AuthContext)
+    const { user, loading } = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure()
     const { data: payments = [] } = useQuery({
         queryKey: ['paymentHistory', user?.email],
+        // enabled:!loading,
         queryFn: async () => {
             const res = await axiosSecure(`/paymentHistory?email=${user?.email}`)
             return res.data
