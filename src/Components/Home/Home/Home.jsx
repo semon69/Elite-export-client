@@ -5,7 +5,7 @@ import PopularInstructor from '../PopularInstructor/PopularInstructor';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-cyan-400'>
             <Banner></Banner>
             <PopularClass></PopularClass>
             <PopularInstructor></PopularInstructor>

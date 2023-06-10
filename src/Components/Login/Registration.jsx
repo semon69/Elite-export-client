@@ -77,6 +77,7 @@ const Registration = () => {
                                     <span className="label-text">Confirm Password</span>
                                 </label>
                                 <input
+                                    type='password'
                                     className="input input-bordered"
                                     placeholder='Confirm Password'
                                     {...register("passwordConfirmation", {
