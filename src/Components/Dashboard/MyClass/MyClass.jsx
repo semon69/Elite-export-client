@@ -4,13 +4,14 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyClass = () => {
     const { user } = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure()
 
     // fetch(`http://localhost:5000/myClass?email=${user?.email}`)
-    const { data: myClass = [] } = useQuery({
+    const { data: myClass = [], refetch } = useQuery({
         queryKey: ['myClass', user?.email],
         queryFn: async () => {
             const res = await axiosSecure(`/myClass?email=${user?.email}`)
@@ -20,6 +21,37 @@ const MyClass = () => {
     console.log(myClass);
     const total = myClass.reduce((sum, item) => item.price + sum, 0)
 
+    const handleDelete = id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/myClass/${id}`,{
+                    method:'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        refetch()
+                        if (data.deletedCount) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+
+            }
+        })
+
+    }
 
     return (
         <div className='max-w-7xl mx-auto my-12'>
@@ -56,7 +88,7 @@ const MyClass = () => {
                                                     <img src={singleClass.image} alt="Image" />
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
                                     </td>
                                     <td>{singleClass.name}</td>

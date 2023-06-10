@@ -31,7 +31,7 @@ const SingleClass = ({ cls }) => {
     }
     return (
         <div>
-            <div className={`border-2 p-4 h-[450px] my-8 bg-cyan-600 text-white rounded ${availableSeats == 0 && 'bg-red-600'}`}>
+            <div className={`border-2 p-4 h-[450px] my-8 rounded ${availableSeats == 0 && 'bg-red-600 text-white'}`}>
                 <p>{name}</p>
                 <img className='w-full h-[250px]' src={image} alt="" />
                 <p>Instructor: {instructorName}</p>
