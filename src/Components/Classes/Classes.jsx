@@ -3,11 +3,13 @@ import axios from 'axios';
 import React from 'react';
 import SingleClass from '../Home/SingleClass.jsx/SingleClass';
 
+
 const Classes = () => {
+    
     const { data: classes = [] } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
-            const res = await axios('http://localhost:5000/classes')
+            const res = await axios('https://sports-acedemy-server.vercel.app/classes')
             return res.data
         }
     })

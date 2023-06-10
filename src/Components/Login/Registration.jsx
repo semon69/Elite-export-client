@@ -19,7 +19,7 @@ const Registration = () => {
                 profileUpdate(data.name, data.photoURL)
                     .then(() => {
                         const user = { name: data.name, email: loggedUser.email, image: data.photoURL }
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://sports-acedemy-server.vercel.app/users', {
                             method: 'POST',
                             headers: { 'content-type': 'application/json' },
                             body: JSON.stringify(user)

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SingleInstructor = ({ singleInstructor }) => {
     const { image, name, email } = singleInstructor;
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
-        <div>
+        <div data-aos="zoom-in">
             <div className='border-2 p-2 my-8 h-[500px] bg-slate-300 rounded'>
                 <img className='w-full h-[400px] rounded hover:scale-105' src={image} alt="" />
                 <div className='text-center mt-5'>

@@ -8,7 +8,7 @@ const PopularClass = () => {
     const { data: popularClass = [], refetch } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
-            const res = await axios('http://localhost:5000/popularClass')
+            const res = await axios('https://sports-acedemy-server.vercel.app/popularClass')
             return res.data
         }
     })

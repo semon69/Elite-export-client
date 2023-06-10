@@ -7,13 +7,13 @@ const ManageClasses = () => {
     const { data: classes = [], refetch } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
-            const res = await axios('http://localhost:5000/classes')
+            const res = await axios('https://sports-acedemy-server.vercel.app/classes')
             return res.data
         }
     })
     const handleApproveAndDenied = (id, status) => {
         console.log(id);
-        fetch(`http://localhost:5000/classes/${id}`, {
+        fetch(`https://sports-acedemy-server.vercel.app/classes/${id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ status: status })
@@ -35,7 +35,7 @@ const ManageClasses = () => {
     const handleFeedback = (id) => {
         console.log(inputValue, id);
         const feedback = inputValue
-        fetch(`http://localhost:5000/classes/feedback/${id}`, {
+        fetch(`https://sports-acedemy-server.vercel.app/classes/feedback/${id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ feedback: feedback })

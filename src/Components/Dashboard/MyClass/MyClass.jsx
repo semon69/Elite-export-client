@@ -10,7 +10,7 @@ const MyClass = () => {
     const { user } = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure()
 
-    // fetch(`http://localhost:5000/myClass?email=${user?.email}`)
+    // fetch(`https://sports-acedemy-server.vercel.app/myClass?email=${user?.email}`)
     const { data: myClass = [], refetch } = useQuery({
         queryKey: ['myClass', user?.email],
         queryFn: async () => {
@@ -32,7 +32,7 @@ const MyClass = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/myClass/${id}`,{
+                fetch(`https://sports-acedemy-server.vercel.app/myClass/${id}`,{
                     method:'DELETE'
                 })
                     .then(res => res.json())

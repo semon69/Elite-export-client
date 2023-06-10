@@ -7,7 +7,7 @@ const PopularInstructor = () => {
     const { data: instructor = [] } = useQuery({
         queryKey: ['instructor'],
         queryFn: async () => {
-            const res = await axios('http://localhost:5000/instructor')
+            const res = await axios('https://sports-acedemy-server.vercel.app/instructor')
             return res.data
         }
     })

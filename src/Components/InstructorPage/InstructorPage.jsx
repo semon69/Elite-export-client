@@ -1,13 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
 import React from 'react';
 import SingleInstructor from '../Home/SingleInstructor/SingleInstructor';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const InstructorPage = () => {
+    const [axiosSecure] = useAxiosSecure()
     const { data: instructor = [] } = useQuery({
         queryKey: ['user/instructor'],
         queryFn: async () => {
-            const res = await axios('http://localhost:5000/user/instructor')
+            const res = await axiosSecure('/user/instructor')
             return res.data
         }
     })
