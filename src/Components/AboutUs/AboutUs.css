@@ -1,0 +1,9 @@
+.bgImage{
+    background-image: url('https://cdn.pixabay.com/photo/2017/12/27/14/10/stadium-3042771_640.jpg');
+    height: 750px;
+    background-position: center center;
+    background-color: rgb(96, 96, 96);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
