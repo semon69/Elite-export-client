@@ -4,6 +4,7 @@ import PopularClass from '../PopularClass/PopularClass';
 import PopularInstructor from '../PopularInstructor/PopularInstructor';
 import { Helmet } from 'react-helmet-async';
 import AboutUs from '../../AboutUs/AboutUs';
+import ContactUs from '../../ContactUs/ContactUs';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <PopularClass></PopularClass>
             <PopularInstructor></PopularInstructor>
             <AboutUs></AboutUs>
+            <ContactUs></ContactUs>
         </div>
     );
 };
