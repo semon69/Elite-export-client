@@ -25,6 +25,16 @@ const Dashboard = () => {
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content bg-cyan-400">
                     {/* Page content here */}
+                    {
+                        isAdmin ? <p className='text-4xl text-center font-bold my-8'>Welcome to Admin Dashboard</p> 
+                        : 
+                        <p className='text-4xl text-center font-bold my-8'>Welcome to Student Dashboard</p>
+                            &&
+                            
+                            isInstructor ? <p className='text-4xl text-center font-bold my-8'>Welcome to Instructor Dashboard</p> 
+                            : 
+                            <p className='text-4xl text-center font-bold my-8'>Welcome to Student Dashboard</p>
+                    }
                     <Outlet></Outlet>
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 

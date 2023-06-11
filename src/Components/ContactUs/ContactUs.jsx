@@ -8,7 +8,7 @@ const ContactUs = () => {
     }
     return (
         <div>
-            <section className="bg-cyan-400 rounded-md py-12">
+            <section className="rounded-md py-12">
                 <div className="max-w-7xl mx-auto px-4">
                     <h2 className="text-3xl text-center mb-8 font-bold">Contact Us</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">

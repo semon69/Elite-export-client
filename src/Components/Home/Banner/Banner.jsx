@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 const Banner = () => {
     return (
-        <div className='my-10'>
+        <div className='my-10 mt-32 lg:mt-10'>
             <Swiper
                 pagination={{
                     dynamicBullets: true,
@@ -14,7 +14,7 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className='h-[660px] bg-zinc-200'>
+                    <div className='lg:h-[660px] bg-zinc-200'>
                         <div className='flex flex-col md:flex-row'>
                             <img className='w-full md:w-1/2 p-4 rounded' src="https://i.ibb.co/6B8tkqH/undraw-playing-golf-y8t9.png" alt="" />
                             <div className='text-center mt-12 w-full md:w-1/2 space-y-4'>
@@ -27,7 +27,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
 
-                    <div className='h-[660px] bg-zinc-200'>
+                    <div className='lg:h-[660px] bg-zinc-200'>
                         <div className='flex flex-col md:flex-row'>
                             <img className='w-full md:w-1/2 p-4 rounded' src="https://i.ibb.co/GsWRhpr/undraw-track-and-field-33qn.png" alt="" />
                             <div className='text-center mt-12 w-full md:w-1/2 space-y-4'>
@@ -40,7 +40,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                       
-                    <div className='h-[660px] bg-zinc-200'>
+                    <div className='lg:h-[660px] bg-zinc-200'>
                         <div className='flex flex-col md:flex-row'>
                             <img className='w-full md:w-1/2 p-4 rounded' src="https://i.ibb.co/KwjT8dp/undraw-goal-0v5v.png" alt="" />
                             <div className='text-center mt-12 w-full md:w-1/2 h-[563px] space-y-4'>
