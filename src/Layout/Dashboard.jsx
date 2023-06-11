@@ -35,14 +35,16 @@ const Dashboard = () => {
                         {
                             isAdmin ?
                                 <>
-                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/manageClasses'>
+                                    <li className='text-center'>Admin Dashboard</li>
+                                    <div className="divider text-green-600">OR</div>
+                                    <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/manageClasses'>
                                         <div className='flex justify-center items-center'>
                                             <span> <SiBookstack /></span>
                                             <span className='ms-2'>Manage Classes</span>
                                         </div>
                                     </NavLink></li>
-                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/allUsers'>
-                                        
+                                    <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/allUsers'>
+
                                         <div className='flex justify-center items-center'>
                                             <span> <FaUserFriends /></span>
                                             <span className='ms-2'>Manage Users</span>
@@ -51,13 +53,15 @@ const Dashboard = () => {
                                 </>
                                 :
                                 <>
-                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myClass'>
+                                    <li className='text-center'>Student Dashboard</li>
+                                    <div className="divider text-green-600">OR</div>
+                                    <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/myClass'>
                                         <div className='flex justify-center items-center'>
                                             <span><SiBookstack /> </span>
                                             <span className='ms-2'>My Selected Classes</span>
                                         </div>
                                     </NavLink></li>
-                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myEnrollClass'>
+                                    <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/myEnrollClass'>
 
                                         <div className='flex justify-center items-center'>
                                             <span> <FcBriefcase /></span>
@@ -66,7 +70,7 @@ const Dashboard = () => {
                                     </NavLink>
 
                                     </li>
-                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/paymentHistory'>
+                                    <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/paymentHistory'>
 
                                         <div className='flex justify-center items-center'>
                                             <span> <MdPayment /></span>
@@ -77,15 +81,17 @@ const Dashboard = () => {
                                     &&
                                     isInstructor ?
                                     <>
-                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/addAClass'>
-                                            
+                                        <li className='text-center'>Instructor Dashboard</li>
+                                        <div className="divider text-green-600">OR</div>
+                                        <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/addAClass'>
+
                                             <div className='flex justify-center items-center'>
                                                 <span> <FaBook /></span>
                                                 <span className='ms-2'>Add A Class</span>
                                             </div>
                                         </NavLink></li>
-                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/instructorClass'>
-                                            
+                                        <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/instructorClass'>
+
                                             <div className='flex justify-center items-center'>
                                                 <span> <SiBookstack /></span>
                                                 <span className='ms-2'>My Class</span>
@@ -94,13 +100,15 @@ const Dashboard = () => {
                                     </>
                                     :
                                     <>
-                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myClass'>
+                                        <li className='text-center'>Student Dashboard</li>
+                                        <div className="divider text-green-600">OR</div>
+                                        <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/myClass'>
                                             <div className='flex justify-center items-center'>
                                                 <span><SiBookstack></SiBookstack> </span>
                                                 <span className='ms-2'>My Selected Classes</span>
                                             </div>
                                         </NavLink></li>
-                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myEnrollClass'>
+                                        <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/myEnrollClass'>
 
                                             <div className='flex justify-center items-center'>
                                                 <span> <FcBriefcase /></span>
@@ -109,7 +117,7 @@ const Dashboard = () => {
                                         </NavLink>
 
                                         </li>
-                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/paymentHistory'>
+                                        <li><NavLink className={({ isActive }) => isActive ? "text-yellow-600" : ""} to='/dashboard/paymentHistory'>
 
                                             <div className='flex justify-center items-center'>
                                                 <span> <MdPayment /></span>

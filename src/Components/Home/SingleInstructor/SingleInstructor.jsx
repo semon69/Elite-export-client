@@ -9,7 +9,7 @@ const SingleInstructor = ({ singleInstructor }) => {
     }, []);
     return (
         <div data-aos="zoom-in">
-            <div className='border-2 p-2 my-8 h-[500px] bg-slate-500 rounded'>
+            <div className='border-2 p-2 shadow-2xl my-8 h-[500px] bg-slate-500 rounded'>
                 <img className='w-full h-[400px] rounded hover:scale-105' src={image} alt="" />
                 <div className='text-center text-white font-semibold mt-5'>
                     <p className='font-bold text-2xl'>{name}</p>

@@ -13,7 +13,6 @@ const InstructorAddedClass = () => {
             return res.data
         }
     })
-    console.log(myClass);
     return (
         <div className='border-2 border-black m-5 py-8'>
             <p className='text-2xl font-bold ms-5'>My Added Class{myClass.length}</p>

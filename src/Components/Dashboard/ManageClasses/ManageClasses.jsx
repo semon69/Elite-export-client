@@ -51,7 +51,7 @@ const ManageClasses = () => {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: 'Send Feedback Succussfully',
+                        title: 'Send Feedback Successfully',
                         showConfirmButton: false,
                         timer: 1500
                     })

@@ -30,7 +30,6 @@ const AddAClass = () => {
                     Swal.fire('A class added')
                 }
             })
-        console.log(newClass);
     }
 
     return (

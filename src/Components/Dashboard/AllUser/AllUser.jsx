@@ -13,7 +13,7 @@ const AllUsers = () => {
         return res.data
     })
 
-    const handleMakeId = user => {
+    const handleMakeAdmin = user => {
         fetch(`https://sports-acedemy-server.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
@@ -75,7 +75,7 @@ const AllUsers = () => {
                                         <td>{user.email}</td>
                                         <td>{user?.role === 'admin' ? 'admin' : 'student' && user?.role === 'instructor' ? 'instructor' : 'student'}</td>
                                         <td> {
-                                            <button disabled={user?.role == 'admin'} onClick={() => handleMakeId(user)} className="btn bg-orange-500 btn-xs text-white">Make Admin</button>
+                                            <button disabled={user?.role == 'admin'} onClick={() => handleMakeAdmin(user)} className="btn bg-orange-500 btn-xs text-white">Make Admin</button>
                                         } </td>
                                         <td><button disabled={user?.role == 'instructor'} onClick={() => handleMakeInstructor(user)} className="btn btn-xs">Make Instructor</button></td>
                                     </tr>)
