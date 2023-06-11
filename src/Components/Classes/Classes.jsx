@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React from 'react';
 import SingleClass from '../Home/SingleClass.jsx/SingleClass';
+import { Helmet } from 'react-helmet-async';
 
 
 const Classes = () => {
@@ -17,6 +18,9 @@ const Classes = () => {
 
     return (
         <div className='bg-cyan-400'>
+            <Helmet>
+                <title>La Masia || Classes</title>
+            </Helmet>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto'>
                 {
                     approveClasses.map(cls => <SingleClass key={cls._id} cls={cls}></SingleClass>)

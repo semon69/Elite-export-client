@@ -7,6 +7,7 @@ import { MdPayment } from 'react-icons/md';
 import { FcBriefcase } from 'react-icons/fc';
 import { FaUserFriends, FaBook } from 'react-icons/fa';
 import { SiBookstack } from 'react-icons/si';
+import { Helmet } from 'react-helmet-async';
 
 const Dashboard = () => {
 
@@ -17,6 +18,9 @@ const Dashboard = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>La Masia || Dashboard</title>
+            </Helmet>
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content bg-cyan-400">
