@@ -35,7 +35,7 @@ const AddAClass = () => {
 
     return (
         <div>
-            <div className=" min-h-screen bg-white">
+            <div className=" min-h-screen">
                 <div className="p-10">
                     <form onSubmit={handleSubmit(onSubmit)} className=" w-full shadow-2xl bg-base-100 p-4 rounded">
                         <div className='flex gap-10'>
@@ -87,7 +87,7 @@ const AddAClass = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Add" />
+                            <input className="btn bg-gradient-to-r from-red-600 to-indigo-700 text-white" type="submit" value="Add" />
                         </div>
                     </form>
                 </div>

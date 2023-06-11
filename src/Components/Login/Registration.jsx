@@ -3,18 +3,16 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import Swal from 'sweetalert2';
 
 const Registration = () => {
     const { register, handleSubmit, reset, formState: { errors }, getValues } = useForm();
     const { createUser, profileUpdate } = useContext(AuthContext);
     const navigate = useNavigate();
     const onSubmit = data => {
-        console.log(data)
         createUser(data.email, data.password)
             .then(result => {
-
                 const loggedUser = result.user;
-                console.log(loggedUser);
 
                 profileUpdate(data.name, data.photoURL)
                     .then(() => {
@@ -26,6 +24,13 @@ const Registration = () => {
                         })
                             .then(data => {
                                 console.log(data);
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'Registration Success',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
                                 navigate('/')
                             })
                             .then(err => console.log(err))
@@ -35,16 +40,16 @@ const Registration = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-gradient-to-r from-indigo-600 to-fuchsia-800">
+            <div className="hero min-h-screen bg-cyan-400">
                 <div className="hero-content flex-col lg:flex-row gap-16">
                     <div className="text-center lg:text-left w-1/2">
                         <img className='rounded' src="https://i.ibb.co/rtcgVch/undraw-Mobile-login-re-9ntv.png" alt="" />
                     </div>
-                    <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100 p-4">
+                    <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-zinc-400 p-4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text font-bold">Name</span>
                                 </label>
                                 <input type="text"  {...register("name", { required: true })} name="name" placeholder="Name" className="input input-bordered" />
                                 {errors.name && <span className="text-red-600">Name is required</span>}
@@ -52,14 +57,14 @@ const Registration = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text font-bold">Email</span>
                                 </label>
                                 <input type="email"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
                                 {errors.email && <span className="text-red-600">Email is required</span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text font-bold">Password</span>
                                 </label>
                                 <input type="password"
                                     {...register("password", {
@@ -74,7 +79,7 @@ const Registration = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Confirm Password</span>
+                                    <span className="label-text font-bold">Confirm Password</span>
                                 </label>
                                 <input
                                     type='password'
@@ -94,7 +99,7 @@ const Registration = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Photo URL</span>
+                                    <span className="label-text font-bold">Photo URL</span>
                                 </label>
                                 <input type="text"  {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
                                 {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}

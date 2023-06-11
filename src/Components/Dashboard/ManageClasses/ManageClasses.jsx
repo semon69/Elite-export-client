@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React, { useRef, useState } from 'react';
+import Swal from 'sweetalert2';
 
 const ManageClasses = () => {
     const [inputValue, setInputValue] = useState('');
@@ -46,6 +47,16 @@ const ManageClasses = () => {
             .then(data => {
                 refetch()
                 console.log(data);
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Send Feedback Succussfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+
             })
     }
     return (
@@ -108,14 +119,14 @@ const ManageClasses = () => {
                                             Deny
                                         </button>
                                         {/* The button to open modal */}
-                                        <label onClick={()=> setFeedbackId(singleClass._id)} htmlFor="my_modal_6" className="btn btn-xs">Feedback</label>
+                                        <label onClick={() => setFeedbackId(singleClass._id)} htmlFor="my_modal_6" className="btn btn-xs">Feedback</label>
 
                                         {/* Put this part before </body> tag */}
                                         <input type="checkbox" id="my_modal_6" className="modal-toggle" />
                                         <div className="modal">
                                             <div className="modal-box">
                                                 <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Give Feedback" className="input input-bordered w-full max-w-xs" />
-                                                <label onClick={() => handleFeedback()} className="btn">Send</label>
+                                                <label onClick={() => handleFeedback()} className="btn ms-3 bg-gradient-to-r from-red-600 to-indigo-700 text-white">Send</label>
                                                 <div className="modal-action">
 
                                                     <label htmlFor="my_modal_6" className="btn">Close!</label>

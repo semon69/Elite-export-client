@@ -15,13 +15,13 @@ const InstructorAddedClass = () => {
     })
     console.log(myClass);
     return (
-        <div>
-            <p>{myClass.length}</p>
+        <div className='border-2 border-black m-5 py-8'>
+            <p className='text-2xl font-bold ms-5'>My Added Class{myClass.length}</p>
             <div className="overflow-x-auto border m-5">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className='text-black text-lg font-semibold'>
                             <th>#</th>
                             <th>
                                 <p>Image</p>

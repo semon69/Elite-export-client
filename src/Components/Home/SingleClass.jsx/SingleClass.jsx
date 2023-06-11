@@ -5,6 +5,7 @@ import useAdmin from '../../../Hooks/useAdmin';
 import useInstructor from '../../../Hooks/useInstructor';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Swal from 'sweetalert2';
 
 const SingleClass = ({ cls }) => {
     const { image, name, availableSeats, instructorName, price, _id } = cls
@@ -27,6 +28,15 @@ const SingleClass = ({ cls }) => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
+                    if(data.insertedId){
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Class Added',
+                            showConfirmButton: false,
+                            timer: 1500
+                          })
+                    }
                 })
         }
         else{

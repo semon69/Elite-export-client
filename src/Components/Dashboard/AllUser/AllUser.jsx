@@ -54,10 +54,10 @@ const AllUsers = () => {
         <div className='max-h-screen'>
             <h2 className='uppercase text-3xl my-4 text-center'>Total User: {users.length}</h2>
             <div>
-                <div className=" overflow-y-scroll max-h-screen m-8 border-2 ">
+                <div className=" overflow-y-scroll max-h-screen m-8 border-2">
                     <table className="table w-full">
                         <thead>
-                            <tr>
+                            <tr className='text-black text-lg font-semibold'>
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Email</th>

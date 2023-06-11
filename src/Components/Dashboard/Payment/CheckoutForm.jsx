@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useContext, useEffect, useState } from 'react';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const CheckoutForm = ({ price, myClass }) => {
     const stripe = useStripe()
@@ -88,6 +89,13 @@ const CheckoutForm = ({ price, myClass }) => {
                     console.log(res.data);
                     if (res.data.insertedId) {
                         // display confirm
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Payment Successful',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                     }
                 })
         }
@@ -114,6 +122,8 @@ const CheckoutForm = ({ price, myClass }) => {
                 <button className="btn btn-primary btn-sm mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
                     Pay
                 </button>
+                {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
+                {transactionId && <p className="text-green-500">Transaction complete with transactionId: {transactionId}</p>}
             </form>
         </div>
     );

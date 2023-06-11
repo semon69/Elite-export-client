@@ -2,6 +2,11 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../Hooks/useAdmin';
 import useInstructor from '../Hooks/useInstructor';
+import { AiFillHome } from 'react-icons/ai';
+import { MdPayment } from 'react-icons/md';
+import { FcBriefcase } from 'react-icons/fc';
+import { FaUserFriends, FaBook } from 'react-icons/fa';
+import { SiBookstack } from 'react-icons/si';
 
 const Dashboard = () => {
 
@@ -26,33 +31,98 @@ const Dashboard = () => {
                         {
                             isAdmin ?
                                 <>
-                                    <li><NavLink to='/dashboard/manageClasses'>Manage Classes</NavLink></li>
-                                    <li><NavLink to='/dashboard/allUsers'>Manage Users</NavLink></li>
+                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/manageClasses'>
+                                        <div className='flex justify-center items-center'>
+                                            <span> <SiBookstack /></span>
+                                            <span className='ms-2'>Manage Classes</span>
+                                        </div>
+                                    </NavLink></li>
+                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/allUsers'>
+                                        
+                                        <div className='flex justify-center items-center'>
+                                            <span> <FaUserFriends /></span>
+                                            <span className='ms-2'>Manage Users</span>
+                                        </div>
+                                    </NavLink></li>
                                 </>
                                 :
                                 <>
-                                    <li><NavLink to='/dashboard/myClass'>My Selected Classes</NavLink></li>
-                                    <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
-                                    <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
+                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myClass'>
+                                        <div className='flex justify-center items-center'>
+                                            <span><SiBookstack /> </span>
+                                            <span className='ms-2'>My Selected Classes</span>
+                                        </div>
+                                    </NavLink></li>
+                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myEnrollClass'>
+
+                                        <div className='flex justify-center items-center'>
+                                            <span> <FcBriefcase /></span>
+                                            <span className='ms-2'>My Enrolled Classes</span>
+                                        </div>
+                                    </NavLink>
+
+                                    </li>
+                                    <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/paymentHistory'>
+
+                                        <div className='flex justify-center items-center'>
+                                            <span> <MdPayment /></span>
+                                            <span className='ms-2'>Payment History</span>
+                                        </div>
+                                    </NavLink></li>
                                 </>
                                     &&
                                     isInstructor ?
                                     <>
-                                        <li><NavLink to='/dashboard/addAClass'>Add A Class</NavLink></li>
-                                        <li><NavLink to='/dashboard/instructorClass'>My Class</NavLink></li>
+                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/addAClass'>
+                                            
+                                            <div className='flex justify-center items-center'>
+                                                <span> <FaBook /></span>
+                                                <span className='ms-2'>Add A Class</span>
+                                            </div>
+                                        </NavLink></li>
+                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/instructorClass'>
+                                            
+                                            <div className='flex justify-center items-center'>
+                                                <span> <SiBookstack /></span>
+                                                <span className='ms-2'>My Class</span>
+                                            </div>
+                                        </NavLink></li>
                                     </>
                                     :
                                     <>
-                                        <li><NavLink to='/dashboard/myClass'>My Selected Classes</NavLink></li>
-                                        <li><NavLink to='/dashboard/myEnrollClass'>My Enrolled Classes</NavLink></li>
-                                        <li><NavLink to='/dashboard/paymentHistory'>Payment History</NavLink></li>
+                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myClass'>
+                                            <div className='flex justify-center items-center'>
+                                                <span><SiBookstack></SiBookstack> </span>
+                                                <span className='ms-2'>My Selected Classes</span>
+                                            </div>
+                                        </NavLink></li>
+                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/myEnrollClass'>
+
+                                            <div className='flex justify-center items-center'>
+                                                <span> <FcBriefcase /></span>
+                                                <span className='ms-2'>My Enrolled Classes</span>
+                                            </div>
+                                        </NavLink>
+
+                                        </li>
+                                        <li><NavLink className={({ isActive}) => isActive? "text-yellow-600": ""} to='/dashboard/paymentHistory'>
+
+                                            <div className='flex justify-center items-center'>
+                                                <span> <MdPayment /></span>
+                                                <span className='ms-2'>Payment History</span>
+                                            </div>
+                                        </NavLink></li>
                                     </>
 
                         }
+                        <div className="divider text-green-600">OR</div>
 
-
-
-                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/'>
+                            <div className='flex justify-center items-center'>
+                                <span><AiFillHome /></span>
+                                <span className='ms-2'>Home</span>
+                            </div>
+                        </NavLink></li>
                     </ul>
 
                 </div>

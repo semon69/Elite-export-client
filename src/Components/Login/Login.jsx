@@ -27,22 +27,22 @@ const Login = () => {
     }
     return (
         <div className=''>
-            <div className="hero min-h-screen bg-gradient-to-r from-indigo-600 to-fuchsia-700">
+            <div className="hero min-h-screen bg-cyan-400">
                 <div className="hero-content flex-col md:flex-row gap-10">
                     <div className="text-center md:w-1/2 lg:text-left">
                         <img src="https://i.ibb.co/g4JgwsS/undraw-Login-re-4vu2.png" alt="" />
                     </div>
-                    <div className="card shadow-2xl bg-base-100 p-4">
+                    <div className="card bg-zinc-400 shadow-2xl p-4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text font-bold">Email</span>
                                 </label>
                                 <input {...register("email", { required: true })} type="email" name="email" placeholder="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text font-bold">Password</span>
                                 </label>
                                 <div className='flex relative'>
                                     <input {...register("password", { required: true })} type={show ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered" />
@@ -54,7 +54,7 @@ const Login = () => {
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
-                        <p className='mt-4'><small>New Here? <Link to="/registration">Create an account</Link> </small></p>
+                        <p className='mt-4'><small>New to La Masia? <Link to="/registration">Create an account</Link> </small></p>
                     </div>
                 </div>
             </div>

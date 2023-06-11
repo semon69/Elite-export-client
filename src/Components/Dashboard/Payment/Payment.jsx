@@ -24,8 +24,8 @@ const Payment = () => {
     const total = myClass.reduce((sum, item) => item.price + sum, 0)
     const price = parseFloat(total.toFixed(2))
     return (
-        <div>
-            <h1>Payment Method</h1>
+        <div className='max-w-4xl mx-auto border-2 border-black my-12'>
+            <h1 className='text-center text-3xl font-bold my-5'>Pay Now</h1>
             <Elements stripe={stripePromise}>
                 <CheckoutForm price={price} myClass={myClass}></CheckoutForm>
             </Elements>
