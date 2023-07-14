@@ -14,7 +14,7 @@ const PopularClass = () => {
     })
     console.log(popularClass);
     return (
-        <div className='max-w-7xl mx-auto my-8 border-2 border-black p-5'>
+        <div className='max-w-7xl mx-auto my-8 p-5'>
             <h2 className='text-4xl text-center font-bold mb-6'>Popular Class Section</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
