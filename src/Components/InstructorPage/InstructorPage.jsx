@@ -14,11 +14,11 @@ const InstructorPage = () => {
         }
     })
     return (
-        <div className='bg-cyan-400 py-8'>
+        <div className='py-8'>
             <Helmet>
                 <title>La Masia || Instructor</title>
             </Helmet>
-            <div className=' max-w-7xl mx-auto border-2 border-black p-5'>
+            <div className=' max-w-7xl mx-auto p-5 pt-24'>
                 <h1 className='text-5xl font-bold text-center'>All Instructors</h1>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                     {

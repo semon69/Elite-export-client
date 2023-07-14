@@ -45,7 +45,7 @@ const SingleClass = ({ cls }) => {
     }
     return (
         <div data-aos="zoom-in-right">
-            <div className={`border-2 border-black p-4 h-[450px] my-8 rounded shadow-2xl ${availableSeats == 0 && 'bg-red-600 text-white'}`}>
+            <div className={`border-2 p-4 h-[450px] my-8 rounded shadow-2xl ${availableSeats == 0 && 'bg-red-600'}`}>
                 <p className='text-xl font-semibold pb-3'>{name}</p>
                 <img className='w-full h-[250px] rounded' src={image} alt="" />
                 <p className='font-bold pt-2'>Instructor: {instructorName}</p>
@@ -53,7 +53,7 @@ const SingleClass = ({ cls }) => {
                     <p>Available Seat: {availableSeats}</p>
                     <p>Price: ${price}</p>
                 </div>
-                <button disabled={isAdmin || isInstructor || availableSeats == 0} onClick={handleSelect} className='btn bg-gradient-to-r from-red-600 to-indigo-700 text-white'>Select</button>
+                <button disabled={isAdmin || isInstructor || availableSeats == 0} onClick={handleSelect} className='btn bg-cyan-600 text-white'>Select</button>
             </div>
         </div>
     );

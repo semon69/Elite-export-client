@@ -46,12 +46,12 @@ const Navbar = ({ isDark, handleToggle }) => {
                         {
                             user ?
                                 <>
-                                    <Link onClick={handleLogout} className='btn bg-gradient-to-r from-red-600 to-indigo-700 text-white'>Logout</Link>
+                                    <Link onClick={handleLogout} className='btn bg-cyan-600 text-white'>Logout</Link>
                                     <p><img title={user?.displayName} className='w-12 rounded-full ms-3' src={user?.photoURL} alt="img" /></p>
                                 </>
 
                                 :
-                                <Link className='btn bg-gradient-to-r from-red-600 to-indigo-700 text-white' to='/login'>Login</Link>
+                                <Link className='btn bg-cyan-600 text-white' to='/login'>Login</Link>
                         }
                     </div>
                 </div>

@@ -17,7 +17,7 @@ const Classes = () => {
     const approveClasses = classes.filter(classe => classe.status == 'approved')
 
     return (
-        <div className='bg-cyan-400'>
+        <div className='pt-24'>
             <Helmet>
                 <title>La Masia || Classes</title>
             </Helmet>
