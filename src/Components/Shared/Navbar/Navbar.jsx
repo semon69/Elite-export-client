@@ -13,10 +13,10 @@ const Navbar = ({ isDark, handleToggle }) => {
 
     const navItem =
         <>
-            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-cyan-200" : ""} to='/'>Home</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-cyan-200" : ""} to='/user/instructors'>Instructors</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-cyan-200" : ""} k to='/classes'>Classes</NavLink></li>
-            {user && <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-cyan-200" : ""} to='/dashboard'>Dashboard</NavLink></li>}
+            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} to='/'>Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} to='/user/instructors'>Instructors</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} k to='/classes'>Classes</NavLink></li>
+            {user && <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} to='/dashboard'>Dashboard</NavLink></li>}
         </>
     return (
         <div className='-mt-10 mb-10'>
@@ -46,12 +46,12 @@ const Navbar = ({ isDark, handleToggle }) => {
                         {
                             user ?
                                 <>
-                                    <Link onClick={handleLogout} className='btn bg-cyan-600 text-white'>Logout</Link>
+                                    <Link onClick={handleLogout} className='btn bg-green-500 text-white'>Logout</Link>
                                     <p><img title={user?.displayName} className='w-12 rounded-full ms-3' src={user?.photoURL} alt="img" /></p>
                                 </>
 
                                 :
-                                <Link className='btn bg-cyan-600 text-white' to='/login'>Login</Link>
+                                <Link className='btn bg-green-500 text-white' to='/login'>Login</Link>
                         }
                     </div>
                 </div>
