@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SingleInstructor from '../SingleInstructor/SingleInstructor';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -11,7 +11,12 @@ const PopularInstructor = () => {
             return res.data
         }
     })
-    console.log(instructor);
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }, []);
     return (
         <div className='max-w-7xl mx-auto'>
             <div className='text-center  mb-10'>

@@ -8,6 +8,8 @@ import { FcBriefcase } from 'react-icons/fc';
 import { FaUserFriends, FaBook } from 'react-icons/fa';
 import { SiBookstack } from 'react-icons/si';
 import { Helmet } from 'react-helmet-async';
+import lottieData from './lottieDashboard.json'
+import Lottie from "lottie-react";
 
 const Dashboard = () => {
 
@@ -26,14 +28,28 @@ const Dashboard = () => {
                 <div className="drawer-content">
                     {/* Page content here */}
                     {
-                        isAdmin ? <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Admin Dashboard</p> 
-                        : 
-                        <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Student Dashboard</p>
-                            &&
-                            
-                            isInstructor ? <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Instructor Dashboard</p> 
-                            : 
-                            <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Student Dashboard</p>
+                        isAdmin ?
+                            <>
+                                <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Admin Dashboard</p>
+                                <Lottie className='h-[50vh]' animationData={lottieData} />
+                            </>
+                            :
+                            <>
+                                <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Student Dashboard</p>
+                                <Lottie className='h-[50vh]' animationData={lottieData} />
+                            </>
+                                &&
+
+                                isInstructor ?
+                                <>
+                                    <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Instructor Dashboard</p>
+                                    <Lottie className='h-[50vh]' animationData={lottieData} />
+                                </>
+                                :
+                                <>
+                                    <p className='text-4xl text-center font-bold my-4 text-green-500'>Welcome to Student Dashboard</p>
+                                    <Lottie className='h-[50vh]' animationData={lottieData} />
+                                </>
                     }
                     <Outlet></Outlet>
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>

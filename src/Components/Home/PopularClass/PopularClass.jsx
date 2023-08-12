@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import SingleClass from '../SingleClass.jsx/SingleClass';
 import SinglePopularClass from '../SinglePopularClass/SinglePopularClass';
 
@@ -12,12 +12,17 @@ const PopularClass = () => {
             return res.data
         }
     })
-    console.log(popularClass);
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }, []);
     return (
         <div className='max-w-7xl mx-auto my-8 p-5'>
             <div className='text-center  mb-14'>
-                <span 
-                className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
+                <span
+                    className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
                 >Popular Classes</span>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>

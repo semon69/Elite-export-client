@@ -48,7 +48,7 @@ const TopStudents = () => {
                                 <div className='p-6 md:pr-20 space-y-4'>
                                     <p className='text-green-500 font-bold text-4xl'>{player.name}</p>
                                     <p className='font-bold text-2xl'>Current Club: <span className='text-green-500'>{player.currentClub}</span></p>
-                                    <div className='flex justify-between font-bold text-2xl '>
+                                    <div className='md:flex justify-between font-bold text-2xl '>
                                         <p>Nationality: <span className='text-green-500'>{player.country}</span></p>
                                         <p>Career Goals: <span className='text-green-500'>{player.goals}</span></p>
                                     </div>

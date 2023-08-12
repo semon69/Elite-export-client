@@ -8,6 +8,7 @@ import ContactUs from '../../ContactUs/ContactUs';
 import { MdLightMode, MdNightlight } from 'react-icons/md';
 import TopStudents from '../TopStudents/TopStudents';
 import Testimonials from '../Testimonials/Testimonials';
+import Facilities from '../Facilities/Facilities';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             <PopularClass></PopularClass>
             <PopularInstructor></PopularInstructor>
             <TopStudents></TopStudents>
+            <Facilities></Facilities>
             <AboutUs></AboutUs>
             <Testimonials></Testimonials>
             <ContactUs></ContactUs>
