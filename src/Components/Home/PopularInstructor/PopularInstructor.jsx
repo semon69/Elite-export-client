@@ -14,10 +14,14 @@ const PopularInstructor = () => {
     console.log(instructor);
     return (
         <div className='max-w-7xl mx-auto'>
-            <h1 className='text-5xl font-bold text-center'>Popular Instructor</h1>
+            <div className='text-center  mb-10'>
+                <span
+                    className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
+                >Meet Our Instructor</span>
+            </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
-                    instructor.map(singleInstructor =>  <SingleInstructor key={singleInstructor._id} singleInstructor={singleInstructor}></SingleInstructor>)
+                    instructor.map(singleInstructor => <SingleInstructor key={singleInstructor._id} singleInstructor={singleInstructor}></SingleInstructor>)
                 }
             </div>
         </div>

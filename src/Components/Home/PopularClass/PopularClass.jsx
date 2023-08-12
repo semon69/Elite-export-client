@@ -18,7 +18,7 @@ const PopularClass = () => {
             <div className='text-center  mb-14'>
                 <span 
                 className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
-                >Popular Class Section</span>
+                >Popular Classes</span>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                 {

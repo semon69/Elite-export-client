@@ -7,7 +7,7 @@ const SinglePopularClass = ({ singleClass }) => {
     console.log(singleClass);
     return (
         <Fade>
-            <div className='border border-white p-2 shadow-2xl rounded flex gap-5 rounded-tr-[100px]'>
+            <div className='md:h-[420px] border border-white p-2 shadow-2xl rounded md:flex gap-5 rounded-tr-[100px]'>
                 <img className='w-full md:w-1/2 h-[400px] rounded' src={image} alt="" />
                 <div className='w-full md:w-1/2 my-4 font-semibold space-y-7 p-2'>
                     <p className='text-3xl font-bold text-green-500'>{name}</p>
