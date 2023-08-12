@@ -65,7 +65,7 @@ const ManageClasses = () => {
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className='text-green-500 font-semibold text-xl'>
                             <th>#</th>
                             <th className='flex gap-8'>
                                 <p>Image</p>
@@ -86,7 +86,7 @@ const ManageClasses = () => {
                                         {index + 1}
                                     </th>
                                     <td>
-                                        <div className="flex items-center space-x-3">
+                                        <div className="flex items-center space-x-3 font-semibold">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-12 h-12">
                                                     <img src={singleClass.image} alt="Image" />
@@ -102,9 +102,9 @@ const ManageClasses = () => {
                                         <br />
                                         <span className="badge badge-ghost badge-sm">{singleClass.instructorEmail}</span>
                                     </td>
-                                    <td>{singleClass.availableSeats}</td>
-                                    <td>{singleClass.price}</td>
-                                    <td>{singleClass.status}</td>
+                                    <td className='font-semibold'>{singleClass.availableSeats}</td>
+                                    <td className='font-semibold'>{singleClass.price}</td>
+                                    <td className='font-semibold'>{singleClass.status}</td>
                                     <th className='flex flex-col gap-4'>
                                         <button
                                             disabled={singleClass?.status == 'approved' || singleClass?.status == 'denied'}

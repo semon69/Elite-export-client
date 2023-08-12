@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const TopStudents = () => {
     const [players, setPlayers] = useState([])
     useEffect(() => {
-        fetch('/public/topStudents.json')
+        fetch('/topStudents.json')
             .then(res => res.json())
             .then(data => setPlayers(data))
     }, [])

@@ -17,7 +17,7 @@ const Testimonials = () => {
 
     const [testimonials, setTestimonials] = useState([])
     useEffect(() => {
-        fetch('/public/testimonials.json')
+        fetch('/testimonials.json')
             .then(res => res.json())
             .then(data => setTestimonials(data))
     }, [])

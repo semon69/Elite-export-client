@@ -59,7 +59,7 @@ const MyClass = () => {
                 <div className='flex justify-evenly text-2xl font-bold'>
                     <p>Total class: {myClass.length}</p>
                     <p>Total Price: {total}</p>
-                    <button className="btn px-4 bg-gradient-to-r from-red-600 to-indigo-700 text-white"><Link to='/dashboard/payment'>Pay</Link> </button>
+                    <button className="btn px-4 bg-green-500 text-white"><Link to='/dashboard/payment'>Pay</Link> </button>
                 </div>
                 <div className="overflow-x-auto border m-5">
                     <table className="table">
@@ -95,7 +95,7 @@ const MyClass = () => {
                                         <td className='text-lg font-semibold'>{singleClass.name}</td>
                                         <td className='font-bold'>{singleClass.availableSeats}</td>
                                         <th className='flex flex-col gap-4'>
-                                            <button onClick={() => handleDelete(singleClass._id)} className="btn bg-red-500 btn-xs text-white">Delete</button>
+                                            <button onClick={() => handleDelete(singleClass._id)} className="btn bg-green-500 btn-xs text-white">Delete</button>
                                         </th>
                                     </tr>
                                 )

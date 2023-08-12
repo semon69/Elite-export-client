@@ -51,13 +51,13 @@ const AllUsers = () => {
     }
 
     return (
-        <div className='max-h-screen'>
+        <div className=''>
             <h2 className='uppercase text-3xl my-4 text-center'>Total User: {users.length}</h2>
             <div>
-                <div className=" overflow-y-scroll max-h-screen m-8 border-2">
+                <div className=" overflow-x-auto overflow-y-auto m-8 border-2">
                     <table className="table w-full">
                         <thead>
-                            <tr className='text-black text-lg font-semibold'>
+                            <tr className=' text-green-500 text-lg font-semibold'>
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -71,11 +71,11 @@ const AllUsers = () => {
                                 users.map((user, index) =>
                                     <tr key={user._id}>
                                         <th>{index + 1}</th>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user?.role === 'admin' ? 'admin' : 'student' && user?.role === 'instructor' ? 'instructor' : 'student'}</td>
+                                        <td className='font-semibold'>{user.name}</td>
+                                        <td className='font-semibold'>{user.email}</td>
+                                        <td  className='font-semibold'>{user?.role === 'admin' ? 'admin' : 'student' && user?.role === 'instructor' ? 'instructor' : 'student'}</td>
                                         <td> {
-                                            <button disabled={user?.role == 'admin'} onClick={() => handleMakeAdmin(user)} className="btn bg-orange-500 btn-xs text-white">Make Admin</button>
+                                            <button disabled={user?.role == 'admin'} onClick={() => handleMakeAdmin(user)} className="btn bg-green-500 btn-xs text-white">Make Admin</button>
                                         } </td>
                                         <td><button disabled={user?.role == 'instructor'} onClick={() => handleMakeInstructor(user)} className="btn btn-xs">Make Instructor</button></td>
                                     </tr>)
