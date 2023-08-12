@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import Swal from 'sweetalert2';
+import lottieData from './lottieRegistration.json'
+import Lottie from "lottie-react";
 
 const Registration = () => {
     const { register, handleSubmit, reset, formState: { errors }, getValues } = useForm();
@@ -40,12 +42,12 @@ const Registration = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-cyan-400">
+            <div className="hero min-h-screen pt-20">
                 <div className="hero-content flex-col lg:flex-row gap-16">
                     <div className="text-center lg:text-left w-1/2">
-                        <img className='rounded' src="https://i.ibb.co/rtcgVch/undraw-Mobile-login-re-9ntv.png" alt="" />
+                    <Lottie animationData={lottieData} />
                     </div>
-                    <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-zinc-400 p-4">
+                    <div className="card flex-shrink-0 md:w-1/2 w-full shadow-2xl p-4 border-4 border-white">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -105,11 +107,11 @@ const Registration = () => {
                                 {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn bg-gradient-to-r from-red-600 to-indigo-700 text-white" type="submit" value="Sign Up" />
+                                <input className="btn bg-green-500 text-white" type="submit" value="Sign Up" />
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
-                        <p className='mt-4'><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p className='mt-4 text-center'><small>Already have an account <Link className='underline' to="/login">Login</Link></small></p>
                     </div>
                 </div>
             </div>

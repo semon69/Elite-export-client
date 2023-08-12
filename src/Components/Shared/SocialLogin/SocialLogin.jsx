@@ -37,7 +37,7 @@ const SocialLogin = () => {
     return (
         <div>
             <div className="divider">OR</div>
-            <div onClick={handleGoogleSignIn} className='border px-3 py-1 flex justify-center items-center gap-4 w-4/5 mx-auto hover:cursor-pointer'>
+            <div onClick={handleGoogleSignIn} className='border font-bold px-3 py-1 flex justify-center items-center gap-4 w-4/5 mx-auto hover:cursor-pointer hover:bg-green-500 hover:text-white'>
                 <p><FcGoogle /></p>
                 <p> Continue With Google</p>
             </div>

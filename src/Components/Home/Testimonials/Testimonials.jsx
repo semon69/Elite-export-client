@@ -47,8 +47,8 @@ const Testimonials = () => {
                     testimonials.map(testimonial =>
 
                         <SwiperSlide className='p-10'>
-                            <div className='flex items-center'>
-                                <div className='w-1/3 flex items-center gap-2'>
+                            <div className='md:flex items-center'>
+                                <div className='w-full md:w-1/3 flex items-center gap-2'>
                                     <div className='w-40 h-40 border-l-8 border-green-500 p-3'>
                                         <img className='rounded-full border-8 border-green-500' src={testimonial.image} alt="" />
                                     </div>
@@ -57,7 +57,7 @@ const Testimonials = () => {
                                         <p className='font-bold'>{testimonial.profession}</p>
                                     </div>
                                 </div>
-                                <div className='w-2/3 font-semibold'>
+                                <div className='w-full md:w-2/3 font-semibold'>
                                     <p>" {testimonial.testimonial} "</p>
                                 </div>
                             </div>
