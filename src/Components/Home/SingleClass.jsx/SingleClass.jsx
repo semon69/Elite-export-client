@@ -46,14 +46,14 @@ const SingleClass = ({ cls }) => {
     return (
         <div data-aos="zoom-in-right">
             <div className={`border-2 p-4 h-[450px] my-8 rounded shadow-2xl ${availableSeats == 0 && 'bg-red-600'}`}>
-                <p className='text-xl font-semibold pb-3'>{name}</p>
+                <p className='text-2xl font-bold pb-3 text-green-500'>{name}</p>
                 <img className='w-full h-[250px] rounded' src={image} alt="" />
-                <p className='font-bold pt-2'>Instructor: {instructorName}</p>
+                <p className='font-bold pt-2'>Instructor: <span className='text-xl text-green-500'>{instructorName}</span></p>
                 <div className='flex justify-between items-center font-semibold py-2'>
-                    <p>Available Seat: {availableSeats}</p>
-                    <p>Price: ${price}</p>
+                    <p>Available Seat: <span className='text-green-500 font-bold'>{availableSeats}</span></p>
+                    <p>Price: <span className='text-green-500 font-bold'>${price}</span></p>
                 </div>
-                <button disabled={isAdmin || isInstructor || availableSeats == 0} onClick={handleSelect} className='btn bg-cyan-600 text-white'>Select</button>
+                <button disabled={isAdmin || isInstructor || availableSeats == 0} onClick={handleSelect} className='btn bg-green-500 text-white'>Select</button>
             </div>
         </div>
     );

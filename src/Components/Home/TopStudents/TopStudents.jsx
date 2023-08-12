@@ -18,7 +18,7 @@ const TopStudents = () => {
     }, [])
     return (
         <div className='max-w-7xl mx-auto'>
-            <div className='text-center  mb-14'>
+            <div className='text-center  md:mb-20 mb-5 mt-6'>
                 <span
                     className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
                 >Top Students</span>
@@ -37,7 +37,7 @@ const TopStudents = () => {
                 }}
                 pagination={true}
                 modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
+                className="mySwiper border-4 border-white"
             >
 
                 {

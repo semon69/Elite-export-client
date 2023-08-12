@@ -22,7 +22,7 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className='md:flex gap-10 mt-28 md:mt-1 items-center px-10'>
+                    <div className='md:flex gap-10 mt-28 md:mt-1 items-center md:px-20 px-2'>
                         <div className='w-full md:w-1/2 '>
                             <div className='space-y-7'>
                                 <h1 className='text-2xl lg:text-5xl font-bold'>Welcome To</h1>
@@ -41,7 +41,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
 
-                    <div className='md:flex gap-10 mt-28 items-center px-10'>
+                    <div className='md:flex gap-10 mt-28 items-center md:px-20 px-2'>
                         <div className='w-full md:w-1/2 '>
                             <div className='space-y-7'>
                                 <h1 className='text-2xl lg:text-5xl font-bold'>Welcome To</h1>

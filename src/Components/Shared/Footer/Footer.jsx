@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='bg-black'>
+        <div className='bg-black border-t-4 border-white'>
             <footer className="footer p-10 max-w-7xl mx-auto text-white">
                 <div>
                     <img className='w-14 rounded' src="https://i.ibb.co/C24ghcf/download.jpg" alt="" />

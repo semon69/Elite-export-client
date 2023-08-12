@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "testimonial001",
+        "name": "Alex Johnson",
+        "profession": "Parent",
+        "image": "https://images.unsplash.com/photo-1484186304838-0bf1a8cff81c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHJhbmRvbSUyMGd1eSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+        "testimonial": "Enrolling my child in the sports academy was the best decision I made. The dedicated coaches, personalized training, and supportive environment have not only improved my child's skills but also boosted their confidence. I'm impressed with the positive impact the academy has had on their overall development."
+    },
+    {
+        "_id": "testimonial002",
+        "name": "Emily Carter",
+        "profession": "Athlete",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "testimonial": "Training at this sports academy has been a game-changer for me. The state-of-the-art facilities, expert coaching, and structured programs have taken my performance to the next level. The academy's focus on technique and mental preparation has given me the edge I need to excel in my sport."
+    },
+    {
+        "_id": "testimonial003",
+        "name": "John Martinez",
+        "profession": "Coach",
+        "image": "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fG1hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "testimonial": "As a coach, I have had the privilege of witnessing the remarkable growth of our athletes at this academy. The emphasis on skill development, teamwork, and character building is truly commendable. It's incredibly rewarding to see the positive impact we're making in shaping the future of these young talents."
+    },
+    {
+        "_id": "testimonial004",
+        "name": "Sarah Thompson",
+        "profession": "Sports Enthusiast",
+        "image": "https://images.unsplash.com/photo-1592961495487-805c73c22198?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY1fHxtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "testimonial": "I've attended workshops and events organized by this sports academy, and I am continually impressed. The quality of instruction, the depth of knowledge shared, and the passion of the staff are truly exceptional. Whether you're an aspiring athlete or simply want to enhance your understanding of sports, this academy is the perfect place to learn and grow."
+    }
+]

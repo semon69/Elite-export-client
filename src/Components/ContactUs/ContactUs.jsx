@@ -11,12 +11,13 @@ const ContactUs = () => {
     return (
         <div>
             <section className="rounded-md py-12">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className='text-center  mb-10'>
-                        <span
-                            className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
-                        >Contact Us</span>
-                    </div>
+                <div className='text-center  md:mb-20 mb-5 mt-5'>
+                    <span
+                        className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
+                    >Contact Us</span>
+                </div>
+                <div className="max-w-7xl mx-auto border-4 border-white px-4 py-2">
+
                     <div className="md:flex items-center">
                         <div className='w-full md:w-2/3' data-aos="fade-up">
                             <h3 className="text-xl font-semibold mb-2">Send us a Message</h3>
