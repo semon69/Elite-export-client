@@ -1,0 +1,69 @@
+[
+    {
+      "_id": "player001",
+      "image": "https://i.ibb.co/vhZ4XG8/cr7.jpg",
+      "name": "Cristiano Ronaldo",
+      "currentClub": "Al-Nasser Fc",
+      "age": 36,
+      "country": "Portugal",
+      "goals": 780,
+      "link": "https://web.facebook.com/Cristiano",
+      "about": "Cristiano Ronaldo, often known as CR7, is an iconic footballer whose athleticism, dedication, and talent have left an indelible mark on the sport. His incredible goal-scoring ability, versatility, and relentless pursuit of excellence have set him apart. Ronaldo's journey, from his early days in Portugal to his stardom at Manchester United, Real Madrid, Juventus, and back to Manchester United, showcases his unyielding determination and resilience.Renowned for his remarkable headers, powerful shots, and adept dribbling, he's won numerous awards, including multiple Ballon d'Or titles. Beyond the accolades, Ronaldo's commitment to philanthropy is evident through his charitable endeavors, reflecting his desire to give back and inspire positive change. His global influence transcends football, embodying hard work, passion, and success. Cristiano Ronaldo's legacy extends beyond his remarkable achievements, encapsulating the essence of a true sporting legend."
+    },
+    {
+      "_id": "player002",
+      "image": "https://i.ibb.co/D84L7Cn/neymar.jpg",
+      "name": "Neymar Jr.",
+      "currentClub": "Paris Saint-Germain",
+      "age": 30,
+      "country": "Brazil",
+      "goals": 210,
+      "link": "https://www.facebook.com/neymarjr",
+      "about": "Neymar Jr., a Brazilian football prodigy, has illuminated the global stage with his dazzling skills and creative flair. His mesmerizing dribbles, intricate ball control, and ability to unlock defenses make him a captivating presence on the field. Rising through the ranks at Santos FC, he quickly ascended to stardom, earning a move to Barcelona, where he formed a formidable attacking trio alongside Messi and Suarez. His journey to Paris Saint-Germain marked a new chapter, solidifying his status as a world-class player. Neymar's audacious style transcends the pitch, captivating fans with his exuberance and charisma. While his career is marked by triumphs and accolades, injuries have posed challenges, revealing his resilience and determination to bounce back stronger. Off the field, Neymar's philanthropic endeavors and engagement with charitable causes underline his commitment to making a positive impact. A cultural icon, his influence extends far beyond football, embodying the spirit of a modern entertainer-athlete. Neymar Jr.'s name is synonymous with excitement, creativity, and the joy of the beautiful game."
+    },
+    {
+      "_id": "player003",
+      "image": "https://i.ibb.co/bvFK9nT/bappy2.jpg",
+      "name": "Kylian Mbappé",
+      "currentClub": "Paris Saint-Germain",
+      "age": 22,
+      "country": "France",
+      "goals": 120,
+      "link": "https://web.facebook.com/kylianmbappeofficiel",
+      "about": "Kylian Mbappé, a youthful sensation from France, has taken the football world by storm with his electrifying speed, innate talent, and remarkable maturity. Bursting onto the scene at AS Monaco, his explosive performances quickly attracted attention, and a move to Paris Saint-Germain solidified his status as one of the game's brightest stars. Mbappé's unique blend of acceleration, technical prowess, and clinical finishing has drawn comparisons to legendary players. His World Cup triumph with the French national team at just 19 showcased his poise and ability to shine on the grandest stage. Off the pitch, he exudes humility and dedication, earning respect both as a player and as a role model. As he continues to evolve, Mbappé's contributions transcend football, symbolizing the potential of a new generation. His commitment to social causes and his willingness to use his platform for positive change underline his character and aspirations beyond the game. Kylian Mbappé embodies the fusion of prodigious talent and unwavering determination, promising a future that holds limitless possibilities."
+    },
+    {
+      "_id": "player004",
+      "image": "https://i.ibb.co/D8mgVNg/luka.jpg",
+      "name": "Luka Modrić",
+      "currentClub": "Real Madrid",
+      "age": 35,
+      "country": "Croatia",
+      "goals": 50,
+      "link": "https://www.facebook.com/ModricLuka10",
+      "about": "Luka Modrić, the Croatian midfield maestro, epitomizes elegance and football intelligence. His graceful presence on the pitch, coupled with an exceptional ability to dictate play, has earned him a place among football's elite. Rising from humble beginnings, Modrić's journey to prominence is a testament to his unwavering dedication and resilience.Having honed his craft at Dinamo Zagreb and Tottenham Hotspur, Modrić's move to Real Madrid marked a defining chapter. His orchestration of the midfield, precise passing, and innate sense of positioning played a pivotal role in Real Madrid's multiple Champions League triumphs. Moreover, his leadership and dedication culminated in Croatia's remarkable run to the 2018 World Cup finalOff the field, Modrić's humility and sportsmanship have solidified his status as a respected figure. He embodies the values of perseverance and excellence, inspiring both aspiring footballers and his peers. Luka Modrić's impact reaches far beyond the pitch, illustrating the transformative power of skill, vision, and determination."
+    },
+    {
+      "_id": "player005",
+      "image": "https://i.ibb.co/WD6Zmdc/salah.jpg",
+      "name": "Mohamed Salah",
+      "currentClub": "Liverpool",
+      "age": 29,
+      "country": "Egypt",
+      "goals": 150,
+      "link": "https://www.facebook.com/momosalah",
+      "about": "Mohamed Salah, the Egyptian sensation, has illuminated the football world with his explosive speed, clinical finishing, and unwavering determination. From his early days in Egypt and a remarkable rise in the Premier League, Salah has become a global icon, enchanting fans with his goal-scoring prowess and magnetic charisma. His tenure at Liverpool has been nothing short of spectacular, helping the club secure league titles and a historic Champions League triumph. Salah's ability to navigate defenses with finesse and his lethal accuracy in front of goal have made him a talismanic figure.Beyond the pitch, Salah's humility and commitment to his roots resonate deeply. He embodies the spirit of sportsmanship and resilience, having overcome challenges to reach the pinnacle of the sport. His influence extends beyond football, using his platform to raise awareness about important causes. Mohamed Salah's journey from the streets of Egypt to international stardom exemplifies the power of talent, hard work, and dedication. He stands as a shining example of how football can transcend borders, inspiring millions and leaving an enduring legacy in the beautiful game."
+    },
+    {
+      "_id": "player006",
+      "image": "https://i.ibb.co/th4pSk6/kevin.jpg",
+      "name": "Kevin De Bruyne",
+      "currentClub": "Manchester City",
+      "age": 30,
+      "country": "Belgium",
+      "goals": 80,
+      "link": "https://www.facebook.com/KevinDeBruyne",
+      "about": " Kevin De Bruyne, the Belgian midfield maestro, is a masterful orchestrator and visionary force on the football field. His exceptional passing accuracy, exquisite technique, and tactical acumen make him a linchpin in Manchester City's success. De Bruyne's ability to read the game and deliver precision assists has earned him admiration as one of the best playmakers in the world.From his early days at Genk to his prominence at Manchester City, De Bruyne's journey reflects his unwavering commitment to excellence. His versatility allows him to seamlessly transition between roles, whether as a playmaker, winger, or even a deep-lying midfielder.De Bruyne's impact extends beyond the pitch, as his influence in matches often transcends statistical achievements. His dedication to teamwork, creativity, and relentless drive make him a vital asset. Off the field, his modesty and dedication to the sport serve as an inspiration to aspiring athletes. In essence, Kevin De Bruyne is the embodiment of football intellect, a player who enriches the game with his remarkable skill set, leaving an indelible mark on the sport and captivating fans with his artistry."
+    }
+  ]
+  

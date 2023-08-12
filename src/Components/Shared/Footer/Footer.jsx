@@ -2,11 +2,17 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 bg-neutral text-white lg:ps-[300px]">
+        <div className='bg-black'>
+            <footer className="footer p-10 max-w-7xl mx-auto text-white">
                 <div>
                     <img className='w-14 rounded' src="https://i.ibb.co/C24ghcf/download.jpg" alt="" />
                     <p>LA MASIA ACADEMY.<br />Providing reliable tech since 1949</p>
+                </div>
+                <div>
+                    <span className="footer-title">Important</span>
+                    <p>Email: lamasia@gmail.com</p>
+                    <p>Mobile: +99018328292</p>
+                    <p>Address: Barcelona, Spain</p>
                 </div>
                 <div>
                     <span className="footer-title">Contact</span>

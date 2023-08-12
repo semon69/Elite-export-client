@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import AboutUs from '../../AboutUs/AboutUs';
 import ContactUs from '../../ContactUs/ContactUs';
 import { MdLightMode, MdNightlight } from 'react-icons/md';
+import TopStudents from '../TopStudents/TopStudents';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Banner></Banner>
             <PopularClass></PopularClass>
             <PopularInstructor></PopularInstructor>
+            <TopStudents></TopStudents>
             <AboutUs></AboutUs>
             <ContactUs></ContactUs>
         </div>
