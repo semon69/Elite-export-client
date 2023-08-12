@@ -18,6 +18,7 @@ import InstructorPage from "../Components/InstructorPage/InstructorPage";
 import AdminRoutes from "./AdminRoutes";
 import InstructorRoutes from "./InstructorRoutes";
 import PaymentHistory from "../Components/Dashboard/PaymentHistory/PaymentHistory";
+import ContactUs from "../Components/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         {
             path:'classes',
             element: <Classes></Classes>
+        },
+        {
+            path:'contact',
+            element: <ContactUs></ContactUs>
         },
         {
             path: 'user/instructors',

@@ -10,7 +10,7 @@ const ContactUs = () => {
     }
     return (
         <div>
-            <section className="rounded-md py-12">
+            <section className="rounded-md md:py-20">
                 <div className='text-center  md:mb-20 mb-5 mt-5'>
                     <span
                         className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
@@ -20,7 +20,7 @@ const ContactUs = () => {
 
                     <div className="md:flex items-center">
                         <div className='w-full md:w-2/3' data-aos="fade-up">
-                            <h3 className="text-xl font-semibold mb-2">Send us a Message</h3>
+                            <h3 className="text-xl font-bold mb-2">Send us a Message</h3>
                             <form onClick={handleForm} className="">
                                 <div className="mb-4">
                                     <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="name">Your Name</label>

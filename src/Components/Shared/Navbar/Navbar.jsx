@@ -13,9 +13,10 @@ const Navbar = ({ isDark, handleToggle }) => {
 
     const navItem =
         <>
-            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} to='/'>Home</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} to='/user/instructors'>Instructors</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} k to='/classes'>Classes</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-green-500 border-black" : ""} to='/'>Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-green-500 border-black" : ""} to='/user/instructors'>Instructors</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-green-500 border-black" : ""} k to='/classes'>Classes</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-green-500 border-black" : ""} k to='/contact'>Contact Us</NavLink></li>
             {user && <li><NavLink className={({ isActive }) => isActive ? "text-yellow-500 border-black bg-green-200" : ""} to='/dashboard'>Dashboard</NavLink></li>}
         </>
     return (
