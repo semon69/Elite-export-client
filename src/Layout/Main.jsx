@@ -8,6 +8,7 @@ const Main = () => {
     const handleToggle = () => {
         setIsDark(!isDark)
     }
+  
     return (
         <div  className={`${isDark ? 'bg-black text-white' : 'bg-slate-100'}`}>
             <Navbar isDark={isDark} handleToggle={handleToggle}></Navbar>
