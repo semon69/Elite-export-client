@@ -19,7 +19,7 @@ const ContactUs = () => {
   return (
     <div>
       <Helmet>
-        <title>Elite Export</title>
+        <title>Elite Explore</title>
       </Helmet>
       <section className="rounded-md md:py-20">
         <div className="text-center  md:mb-20 mb-5 mt-5">

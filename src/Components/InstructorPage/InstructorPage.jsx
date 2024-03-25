@@ -22,7 +22,7 @@ const InstructorPage = () => {
     return (
         <div className='py-8'>
             <Helmet>
-                <title>Elite Export || Instructor</title>
+                <title>Elite Explore || Instructor</title>
             </Helmet>
             <div className=' max-w-7xl mx-auto p-5 pt-24'>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>

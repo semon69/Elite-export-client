@@ -27,7 +27,7 @@ const Banner = () => {
               <div className="space-y-7">
                 <h1 className="text-2xl lg:text-5xl font-bold">Welcome To</h1>
                 <span className="text-green-500 text-3xl lg:text-8xl font-bold">
-                  Elite Export
+                  Elite Explore
                 </span>
                 <p className="font-bold">Sports Academy</p>
                 <p>
@@ -63,7 +63,7 @@ const Banner = () => {
               <div className="space-y-7">
                 <h1 className="text-2xl lg:text-5xl font-bold">Welcome To</h1>
                 <span className="text-green-500 text-3xl lg:text-8xl font-bold">
-                  Elite Export
+                  Elite Explore
                 </span>
                 <p className="font-bold">Sports Academy</p>
                 <p>
