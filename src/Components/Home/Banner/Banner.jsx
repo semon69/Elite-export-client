@@ -1,71 +1,101 @@
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 // import Particles from "react-tsparticles";
 // import { loadFull } from "tsparticles";
-import lottiData1 from '../Banner/lottie1.json'
-import lottiData2 from '../Banner/lottie2.json'
+import lottiData1 from "../Banner/lottie1.json";
+import lottiData2 from "../Banner/lottie2.json";
 import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
 // import { loadSlim } from "tsparticles-slim";
 
 const Banner = () => {
+  return (
+    <div className="my-10">
+      <Swiper
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div className="md:flex gap-10 mt-28 md:mt-1 items-center md:px-20 px-2">
+            <div className="w-full md:w-1/2 ">
+              <div className="space-y-7">
+                <h1 className="text-2xl lg:text-5xl font-bold">Welcome To</h1>
+                <span className="text-green-500 text-3xl lg:text-8xl font-bold">
+                  Elite Export
+                </span>
+                <p className="font-bold">Sports Academy</p>
+                <p>
+                  Elite Export Sports Academy stands as a beacon of athletic
+                  excellence in Bangladesh, offering a platform for aspiring
+                  athletes to hone their skills and pursue their sporting
+                  dreams. Situated in the bustling city of Dhaka, the academy
+                  serves as a hub for talent development, catering to
+                  individuals from all walks of life and backgrounds. As Elite
+                  Export Sports Academy continues to nurture the next generation
+                  of sporting talent, it remains steadfast in its mission to
+                  empower individuals to realize their athletic ambitions, both
+                  on and off the field. With a commitment to excellence,
+                  inclusivity, and innovation, the academy serves as a beacon of
+                  inspiration for athletes worldwide, shaping the future of
+                  sports in Bangladesh and beyond.
+                </p>
+                <div>
+                  <span className="font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 hover:bg-blue-500 hover:text-white hover:rounded hover:p-1 cursor-pointer">
+                    <Link to="/classes">Find your favorite one</Link>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <Lottie animationData={lottiData1} />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="md:flex gap-10 mt-28 items-center md:px-20 px-2">
+            <div className="w-full md:w-1/2 ">
+              <div className="space-y-7">
+                <h1 className="text-2xl lg:text-5xl font-bold">Welcome To</h1>
+                <span className="text-green-500 text-3xl lg:text-8xl font-bold">
+                  Elite Export
+                </span>
+                <p className="font-bold">Sports Academy</p>
+                <p>
+                Elite Export Sports Academy stands as a beacon of athletic
+                  excellence in Bangladesh, offering a platform for aspiring
+                  athletes to hone their skills and pursue their sporting
+                  dreams. Situated in the bustling city of Dhaka, the academy
+                  serves as a hub for talent development, catering to
+                  individuals from all walks of life and backgrounds. As Elite
+                  Export Sports Academy continues to nurture the next generation
+                  of sporting talent, it remains steadfast in its mission to
+                  empower individuals to realize their athletic ambitions, both
+                  on and off the field. With a commitment to excellence,
+                  inclusivity, and innovation, the academy serves as a beacon of
+                  inspiration for athletes worldwide, shaping the future of
+                  sports in Bangladesh and beyond.
+                </p>
+                <div>
+                  <span className="font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 cursor-pointer hover:bg-blue-500 hover:text-white hover:rounded hover:p-1">
+                    <Link to="/classes">Find your favorite one</Link>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <Lottie animationData={lottiData2} />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
 
-    return (
-        <div className='my-10'>
-            <Swiper
-                pagination={{
-                    dynamicBullets: true,
-                }}
-                modules={[Pagination]}
-                className="mySwiper"
-            >
-                <SwiperSlide>
-                    <div className='md:flex gap-10 mt-28 md:mt-1 items-center md:px-20 px-2'>
-                        <div className='w-full md:w-1/2 '>
-                            <div className='space-y-7'>
-                                <h1 className='text-2xl lg:text-5xl font-bold'>Welcome To</h1>
-                                <span className='text-green-500 text-3xl lg:text-8xl font-bold'>La Masia-Lite</span>
-                                <p className='font-bold'>Sports Academy</p>
-                                <p>In the heart of Catalonia, a renowned sporting haven stands as a testament to excellence and the art of player development. La Masia Sport Academy, nestled amidst the breathtaking landscapes of Spain, has etched its legacy as an iconic institution that shapes not just athletes, but future champions.</p>
-                                <div>
-                                    <span className='font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 cursor-pointer'>Find your favorite one</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='w-full md:w-1/2'>
-                            <Lottie animationData={lottiData1} />
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-
-                    <div className='md:flex gap-10 mt-28 items-center md:px-20 px-2'>
-                        <div className='w-full md:w-1/2 '>
-                            <div className='space-y-7'>
-                                <h1 className='text-2xl lg:text-5xl font-bold'>Welcome To</h1>
-                                <span className='text-green-500 text-3xl lg:text-8xl font-bold'>La Masia-Lite</span>
-                                <p className='font-bold'>Sports Academy</p>
-                                <p>In the heart of Catalonia, a renowned sporting haven stands as a testament to excellence and the art of player development. La Masia Sport Academy, nestled amidst the breathtaking landscapes of Spain, has etched its legacy as an iconic institution that shapes not just athletes, but future champions.</p>
-                                <div>
-                                    <span className='font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 cursor-pointer'>Find your favorite one</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='w-full md:w-1/2'>
-                            <Lottie animationData={lottiData2} />
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-            </Swiper>
-
-
-
-
-
-            {/* <Particles
+      {/* <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -139,8 +169,8 @@ const Banner = () => {
                     detectRetina: true,
                 }}
             /> */}
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Banner;

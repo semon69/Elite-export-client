@@ -5,23 +5,24 @@ import PopularInstructor from '../PopularInstructor/PopularInstructor';
 import { Helmet } from 'react-helmet-async';
 import AboutUs from '../../AboutUs/AboutUs';
 import ContactUs from '../../ContactUs/ContactUs';
-import { MdLightMode, MdNightlight } from 'react-icons/md';
 import TopStudents from '../TopStudents/TopStudents';
 import Testimonials from '../Testimonials/Testimonials';
 import Facilities from '../Facilities/Facilities';
+import Events from '../Events/Events';
 
 
 const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>La Masia || Home</title>
+                <title>Elite Export || Home </title>
             </Helmet>
             <Banner></Banner>
             <PopularClass></PopularClass>
             <PopularInstructor></PopularInstructor>
             <TopStudents></TopStudents>
             <Facilities></Facilities>
+            <Events></Events>
             <AboutUs></AboutUs>
             <Testimonials></Testimonials>
             <ContactUs></ContactUs>
