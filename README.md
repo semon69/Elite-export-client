@@ -1,4 +1,4 @@
-* La Masia Sports Academy
+* Elite Export Sports Academy
 
 * This a sports academy. Students from european country can visit in summer vacation.
 * A student can find here popular classes, popular instructors, all classes and instructors.
