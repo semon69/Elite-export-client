@@ -11,11 +11,11 @@ const AboutUs = () => {
           <div className="text-green-500 w-full md:w-1/2 p-2">
             <div className="mb-8">
               <span className="text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3">
-                About Elite Export
+                About Elite Explore
               </span>
             </div>
             <p className="text-white py-5">
-              Elite Export Sports Academy stands as a beacon of athletic
+              Elite Explore Sports Academy stands as a beacon of athletic
               excellence in Bangladesh, offering a platform for aspiring
               athletes to hone their skills and pursue their sporting dreams.
               Situated in the bustling city of Dhaka, the academy serves as a
