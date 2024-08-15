@@ -14,7 +14,7 @@ const Facilities = () => {
     AOS.init();
   }, []);
   return (
-    <div className="max-w-7xl mx-auto mt-12">
+    <div className="max-w-7xl mx-auto mt-12 p-2">
       <div className="text-center  mb-14">
         <span className="text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3">
           Facilities

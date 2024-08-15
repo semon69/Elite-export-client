@@ -7,13 +7,13 @@ const Events = () => {
     AOS.init();
   }, []);
   return (
-    <div className="max-w-7xl mx-auto mt-12 mb-12">
+    <div className="max-w-7xl mx-auto mt-12 mb-12 p-2">
       <div className="text-center  mb-14">
         <span className="text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3">
           Upcoming Events
         </span>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div
           data-aos="zoom-out"
           style={{
@@ -27,12 +27,15 @@ const Events = () => {
               28/05/2024
             </p>
             <p className="font-bold mt-3 text-white">
-              Learn, how to play football when opponents is more stronger than you
+              Learn, how to play football when opponents is more stronger than
+              you
             </p>
-            <p className="font-bold text-lg text-white mt-4">Time: 16:00 - 18:00 UTC</p>
+            <p className="font-bold text-lg text-white mt-4">
+              Time: 16:00 - 18:00 UTC
+            </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div
             data-aos="zoom-out"
             className="bg-white p-2 rounded relative hover:scale-75 cursor-pointer"
@@ -43,7 +46,7 @@ const Events = () => {
                 src="https://cdn.pixabay.com/photo/2018/03/30/12/53/people-3275289_1280.jpg"
               />
             </div>
-            <p className="border-2 bg-green-500 text-white absolute top-2/4 left-20 p-2 font-bold">
+            <p className="border-2 bg-green-500 text-white absolute md:top-2/4 bottom-20 md:left-20 left-32 p-2 font-bold">
               30/05/2024
             </p>
             <p className="font-bold mt-8">
@@ -61,7 +64,7 @@ const Events = () => {
                 src="https://cdn.pixabay.com/photo/2016/08/11/18/47/volleyball-team-1586522_960_720.jpg"
               />
             </div>
-            <p className="border-2 bg-green-500 text-white absolute top-2/4 left-20 p-2 font-bold">
+            <p className="border-2 bg-green-500 text-white absolute md:top-2/4 bottom-24 md:left-20 left-32 p-2 font-bold">
               10/06/2024
             </p>
             <p className="font-bold mt-8">

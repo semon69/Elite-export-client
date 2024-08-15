@@ -16,7 +16,7 @@ const TopStudents = () => {
       .then((data) => setPlayers(data));
   }, []);
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto md:h-[650px] p-2">
       <div className="text-center  md:mb-20 mb-5 mt-6">
         <span className="text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3">
           Top Students
@@ -41,7 +41,7 @@ const TopStudents = () => {
         {players.map((player) => (
           <SwiperSlide key={players._id}>
             <div className="md:flex gap-5">
-              <img className="md:w-[550px]" src={player.image} alt="" />
+              <img className="md:w-[550px] md:max-h-[500px]" src={player.image} alt="" />
               <div className="p-6 md:pr-20 space-y-4">
                 <p className="text-green-500 font-bold text-4xl">
                   {player.name}

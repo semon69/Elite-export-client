@@ -22,11 +22,11 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="md:flex gap-10 mt-28 md:mt-1 items-center md:px-20 px-2">
+          <div className="md:flex gap-10 mt-28 md:mt-10 items-center md:px-20 px-2">
             <div className="w-full md:w-1/2 ">
-              <div className="space-y-7">
-                <h1 className="text-2xl lg:text-5xl font-bold">Welcome To</h1>
-                <span className="text-green-500 text-3xl lg:text-8xl font-bold">
+              <div className="space-y-5">
+                <h1 className="text-2xl lg:text-4xl font-bold">Welcome To</h1>
+                <span className="text-green-500 text-2xl lg:text-6xl font-bold">
                   Elite Explore
                 </span>
                 <p className="font-bold">Sports Academy</p>
@@ -41,9 +41,7 @@ const Banner = () => {
                   of sporting talent, it remains steadfast in its mission to
                   empower individuals to realize their athletic ambitions, both
                   on and off the field. With a commitment to excellence,
-                  inclusivity, and innovation, the academy serves as a beacon of
-                  inspiration for athletes worldwide, shaping the future of
-                  sports in Bangladesh and beyond.
+                  inclusivity, and innovation.
                 </p>
                 <div>
                   <span className="font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 hover:bg-blue-500 hover:text-white hover:rounded hover:p-1 cursor-pointer">
@@ -60,14 +58,14 @@ const Banner = () => {
         <SwiperSlide>
           <div className="md:flex gap-10 mt-28 items-center md:px-20 px-2">
             <div className="w-full md:w-1/2 ">
-              <div className="space-y-7">
-                <h1 className="text-2xl lg:text-5xl font-bold">Welcome To</h1>
-                <span className="text-green-500 text-3xl lg:text-8xl font-bold">
+              <div className="space-y-5">
+                <h1 className="text-2xl lg:text-4xl font-bold">Welcome To</h1>
+                <span className="text-green-500 text-2xl lg:text-6xl font-bold">
                   Elite Explore
                 </span>
                 <p className="font-bold">Sports Academy</p>
                 <p>
-                Elite Export Sports Academy stands as a beacon of athletic
+                  Elite Export Sports Academy stands as a beacon of athletic
                   excellence in Bangladesh, offering a platform for aspiring
                   athletes to hone their skills and pursue their sporting
                   dreams. Situated in the bustling city of Dhaka, the academy
@@ -77,12 +75,10 @@ const Banner = () => {
                   of sporting talent, it remains steadfast in its mission to
                   empower individuals to realize their athletic ambitions, both
                   on and off the field. With a commitment to excellence,
-                  inclusivity, and innovation, the academy serves as a beacon of
-                  inspiration for athletes worldwide, shaping the future of
-                  sports in Bangladesh and beyond.
+                  inclusivity, and innovation.
                 </p>
                 <div>
-                  <span className="font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 cursor-pointer hover:bg-blue-500 hover:text-white hover:rounded hover:p-1">
+                  <span className="font-bold lg:text-xl text-green-500 border-b-4 border-green-500 pb-3 mt-5 hover:bg-blue-500 hover:text-white hover:rounded hover:p-1 cursor-pointer">
                     <Link to="/classes">Find your favorite one</Link>
                   </span>
                 </div>
