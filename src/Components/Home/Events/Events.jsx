@@ -46,7 +46,7 @@ const Events = () => {
                 src="https://cdn.pixabay.com/photo/2018/03/30/12/53/people-3275289_1280.jpg"
               />
             </div>
-            <p className="border-2 bg-green-500 text-white absolute md:top-2/4 bottom-20 md:left-20 left-32 p-2 font-bold">
+            <p className="border-2 bg-green-500 text-white absolute md:top-2/4 md:bottom-32 bottom-20 md:left-20 left-32 p-2 font-bold">
               30/05/2024
             </p>
             <p className="font-bold mt-8">
@@ -64,7 +64,7 @@ const Events = () => {
                 src="https://cdn.pixabay.com/photo/2016/08/11/18/47/volleyball-team-1586522_960_720.jpg"
               />
             </div>
-            <p className="border-2 bg-green-500 text-white absolute md:top-2/4 bottom-24 md:left-20 left-32 p-2 font-bold">
+            <p className="border-2 bg-green-500 text-white absolute md:top-2/4 md:bottom-32 bottom-24 md:left-20 left-32 p-2 font-bold">
               10/06/2024
             </p>
             <p className="font-bold mt-8">

@@ -16,7 +16,7 @@ const TopStudents = () => {
       .then((data) => setPlayers(data));
   }, []);
   return (
-    <div className="max-w-7xl mx-auto md:h-[650px] p-2">
+    <div className="max-w-7xl mx-auto md:h-[600px] p-2">
       <div className="text-center  md:mb-20 mb-5 mt-6">
         <span className="text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3">
           Top Students

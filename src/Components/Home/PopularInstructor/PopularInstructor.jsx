@@ -7,7 +7,7 @@ const PopularInstructor = () => {
     const { data: instructor = [] } = useQuery({
         queryKey: ['instructor'],
         queryFn: async () => {
-            const res = await axios('https://sports-acedemy-server.vercel.app/instructor')
+            const res = await axios('https://sports-acedemy-server.vercel.app/user/instructor')
             return res.data
         }
     })
@@ -24,9 +24,9 @@ const PopularInstructor = () => {
                     className='text-4xl  font-bold mb-6 text-green-500 border-b-4 border-green-500 pb-3'
                 >Meet Our Instructor</span>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 {
-                    instructor.map(singleInstructor => <SingleInstructor key={singleInstructor._id} singleInstructor={singleInstructor}></SingleInstructor>)
+                    instructor.slice(0,8).map(singleInstructor => <SingleInstructor key={singleInstructor._id} singleInstructor={singleInstructor}></SingleInstructor>)
                 }
             </div>
         </div>

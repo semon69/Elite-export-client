@@ -45,7 +45,7 @@ const SingleClass = ({ cls }) => {
     }
     return (
         <div data-aos="zoom-in">
-            <div className={`border-2 p-4 h-[450px] my-8 rounded shadow-2xl ${availableSeats == 0 && 'bg-red-600'}`}>
+            <div className={`border-2 p-4 h-[480px] my-8 rounded shadow-2xl ${availableSeats == 0 && 'bg-red-600'}`}>
                 <p className='text-2xl font-bold pb-3 text-green-500'>{name}</p>
                 <img className='w-full h-[250px] rounded' src={image} alt="" />
                 <p className='font-bold pt-2'>Instructor: <span className='text-xl text-green-500'>{instructorName}</span></p>

@@ -25,7 +25,7 @@ const InstructorPage = () => {
                 <title>Elite Explore || Instructor</title>
             </Helmet>
             <div className=' max-w-7xl mx-auto p-5 pt-24'>
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-10'>
                     {
                         instructor.map(singleInstructor => <SingleInstructor key={singleInstructor._id} singleInstructor={singleInstructor}></SingleInstructor>)
                     }
